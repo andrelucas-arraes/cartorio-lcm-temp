@@ -55,23 +55,9 @@ export default function Header() {
               </a>
             </div>
           </div>
-          <div className="relative group">
-            <button
-              onClick={() => toggleDropdown('cartorio')}
-              style={{ fontFamily: 'Source Sans Pro, sans-serif' }}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1"
-            >
-              Serviços
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </button>
-            <div className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <a href="/" className="block px-4 py-2 text-sm text-foreground hover:bg-primary hover:text-white transition-colors">
-                Cartório Digital
-              </a>
-            </div>
-        </div>
+          <a href="/nossos-servicos" style={{ fontFamily: "Source Sans Pro, sans-serif" }} className=" text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Nossos Serviços
+          </a>
           <a href="/links" style={{ fontFamily: "Source Sans Pro, sans-serif" }} className=" text-sm font-medium text-foreground hover:text-primary transition-colors">
           Links Úteis
           </a>
