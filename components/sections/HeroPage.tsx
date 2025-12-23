@@ -36,18 +36,20 @@ export default function HeroPage() {
 
         {/* Botões */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button
+          <a
+            href="#contato"
             style={{ fontFamily: "Montserrat, sans-serif" }}
-            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-all duration-300 text-sm sm:text-base"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-all duration-300 text-sm sm:text-base text-center"
           >
             Contato
-          </button>
-          <button
+          </a>
+          <a
+            href="/nossos-servicos"
             style={{ fontFamily: "Montserrat, sans-serif" }}
-            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-300 text-sm sm:text-base"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-300 text-sm sm:text-base text-center"
           >
-            Política de privacidade
-          </button>
+            Nossos Serviços
+          </a>
         </div>
       </div>
 

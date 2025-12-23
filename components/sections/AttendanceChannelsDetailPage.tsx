@@ -168,9 +168,6 @@ export default function AttendanceChannelsDetailPage() {
                   <br />
                   Fechado
                 </p>
-                <p className="text-sm text-foreground/70 mt-4">
-                  ℹ️ Atendimento presencial mediante agendamento prévio
-                </p>
               </div>
             </div>
           </div>
