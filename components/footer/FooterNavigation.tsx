@@ -8,8 +8,10 @@
  */
 export default function FooterNavigation() {
   const links = [
-    { label: "Institucional", href: "#institucional" },
-    { label: "Transparência", href: "#transparencia" },
+    { label: "Início", href: "/" },
+    { label: "Nossos Serviços", href: "/nossos-servicos" },
+    { label: "Links Úteis", href: "/links" },
+    { label: "LGPD", href: "/lgpd" },
     { label: "Contato", href: "#contato" },
   ];
 
