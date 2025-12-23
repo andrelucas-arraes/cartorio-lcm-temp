@@ -16,7 +16,7 @@ export default function FooterBottom() {
       >
         {/* Esquerda - Copyright */}
         <div>
-          <p>Copyright © 2025 Cartório do 1º Cartório</p>
+          <p>Copyright © {new Date().getFullYear()} Cartório Luciana Carrilho de Moraes Marinho</p>
         </div>
 
         {/* Centro - Nome do Cartório */}
@@ -26,7 +26,33 @@ export default function FooterBottom() {
 
         {/* Direita - Desenvolvimento */}
         <div className="md:text-right">
-          <p>Desenvolvimento: <span className="text-white/80">-</span></p>
+          <p className="mb-2 text-white/90 font-medium">Desenvolvido por:</p>
+          <div className="flex flex-col md:items-end gap-1.5">
+            <a
+              href="https://gabriellucasafb.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+            >
+              Gabriel Lucas
+            </a>
+            <a
+              href="https://www.viniccius.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+            >
+              Vinicius Souza
+            </a>
+            <a
+              href="https://github.com/andrearraesDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+            >
+              André Arraes
+            </a>
+          </div>
         </div>
       </div>
     </div>
