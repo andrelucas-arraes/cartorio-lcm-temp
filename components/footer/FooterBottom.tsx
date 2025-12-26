@@ -26,33 +26,35 @@ export default function FooterBottom() {
 
         {/* Direita - Desenvolvimento */}
         <div className="md:text-right">
-          <p className="mb-2 text-white/90 font-medium">Desenvolvido por:</p>
-          <div className="flex flex-col md:items-end gap-1.5">
+          <p className="text-white/90 font-medium inline">
+            Desenvolvido por:{' '}
             <a
               href="https://gabriellucasafb.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
             >
               Gabriel Lucas
             </a>
+            {', '}
             <a
               href="https://www.viniccius.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
             >
               Vinicius Souza
             </a>
+            {' e '}
             <a
               href="https://github.com/andrearraesDev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:underline text-xs inline-block"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
             >
               André Arraes
             </a>
-          </div>
+          </p>
         </div>
       </div>
     </div>

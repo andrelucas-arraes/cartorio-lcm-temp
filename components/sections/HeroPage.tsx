@@ -17,7 +17,8 @@ export default function HeroPage() {
           style={{ fontFamily: "Montserrat, sans-serif" }}
           className="font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight"
         >
-          Seja bem vindo ao Cartório Luciana Carrilho de Moraes Marinho
+          Seja bem vindo ao Cartório<br />
+          Luciana Carrilho de Moraes Marinho
         </h1>
 
         <p

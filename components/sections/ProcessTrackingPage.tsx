@@ -1,4 +1,4 @@
-import { Phone, Mail, AlertCircle, Loader } from 'lucide-react';
+import { Phone, Mail, AlertCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 
@@ -7,11 +7,6 @@ export default function ProcessTrackingPage() {
     <section className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Ícone */}
-          <div className="mb-6 flex justify-center">
-            <Loader className="w-12 h-12 sm:w-16 sm:h-16 text-primary animate-spin" />
-          </div>
-
           {/* Título */}
           <h2
             style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -57,7 +52,7 @@ export default function ProcessTrackingPage() {
           <div className="mt-8 sm:mt-12 p-6 sm:p-8 bg-white border border-border rounded-lg">
             <h3
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="font-bold text-base sm:text-lg text-primary mb-4"
+              className="font-bold text-lg sm:text-xl md:text-2xl text-primary mb-4"
             >
               Precisa de informações sobre seu processo?
             </h3>
