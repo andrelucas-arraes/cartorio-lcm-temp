@@ -15,7 +15,7 @@ export default function HeroPage() {
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 text-center max-w-2xl">
         <h1
           style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-black text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-white mb-4 md:mb-6 leading-tight"
+          className="font-black text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl text-white mb-4 md:mb-6 leading-tight"
         >
           Seja bem vindo ao Cartório<br />
           Luciana Carrilho de Moraes Marinho
@@ -23,14 +23,14 @@ export default function HeroPage() {
 
         <p
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-          className="text-base sm:text-lg md:text-xl text-white/90 mb-3 md:mb-4"
+          className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 mb-3 md:mb-4"
         >
           Aqui você encontra informações importantes
         </p>
 
         <p
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-          className="text-sm sm:text-base md:text-lg text-white/80 mb-8 md:mb-10"
+          className="text-xs sm:text-sm md:text-sm lg:text-base text-white/80 mb-8 md:mb-10"
         >
           Estamos prontos para atender suas solicitações
         </p>
