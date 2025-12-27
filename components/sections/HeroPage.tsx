@@ -15,7 +15,7 @@ export default function HeroPage() {
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 text-center max-w-2xl">
         <h1
           style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight"
+          className="font-black text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl text-white mb-4 md:mb-6 leading-tight"
         >
           Seja bem vindo ao Cartório<br />
           Luciana Carrilho de Moraes Marinho

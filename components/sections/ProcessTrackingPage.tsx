@@ -52,36 +52,36 @@ export default function ProcessTrackingPage() {
           <div className="mt-8 sm:mt-12 p-6 sm:p-8 bg-white border border-border rounded-lg">
             <h3
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              className="font-bold text-lg sm:text-xl md:text-2xl text-primary mb-4"
+              className="font-bold text-xl sm:text-2xl md:text-3xl text-primary mb-4"
             >
               Precisa de informações sobre seu processo?
             </h3>
             <p
               style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-              className="text-sm sm:text-base text-foreground/70 mb-6"
+              className="text-base sm:text-lg md:text-xl text-foreground/70 mb-6"
             >
               Entre em contato conosco através dos canais disponíveis:
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
                 href="tel:+558698718166"
-                className="px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"
               >
-                <Phone className="w-4 h-4" /> Ligar
+                <Phone className="w-5 h-5" /> Ligar
               </a>
               <a
                 href="https://wa.me/558698718166"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"
               >
-                <FaWhatsapp className="w-4 h-4" /> WhatsApp
+                <FaWhatsapp className="w-5 h-5" /> WhatsApp
               </a>
               <a
                 href="mailto:cartorio1officiopi@hotmail.com"
-                className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"
               >
-                <Mail className="w-4 h-4" /> Email
+                <Mail className="w-5 h-5" /> Email
               </a>
             </div>
           </div>

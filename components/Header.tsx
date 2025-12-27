@@ -49,24 +49,24 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <a href="/" className="flex items-center">
             <Image
               src="/images/logo-lcm.svg"
               alt="LCM Cartório"
-              className="w-auto h-8 md:h-10"
+              className="w-auto h-7 sm:h-8 md:h-10"
             />
           </a>
         </div>
 
         {/* Navigation Desktop */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden min-[771px]:flex items-center gap-3 min-[1018px]:gap-4 xl:gap-6 2xl:gap-8">
           <a 
             href="/" 
             style={{ fontFamily: 'Source Sans Pro, sans-serif' }} 
-            className={`text-sm font-medium hover:text-primary transition-colors relative pb-1 ${
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
               pathname === '/' ? 'text-primary' : 'text-foreground'
             }`}
           >
@@ -78,7 +78,7 @@ export default function Header() {
           <a 
             href="/nossos-servicos" 
             style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-sm font-medium hover:text-primary transition-colors relative pb-1 ${
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
               pathname === '/nossos-servicos' ? 'text-primary' : 'text-foreground'
             }`}
           >
@@ -90,7 +90,7 @@ export default function Header() {
           <a 
             href="/links" 
             style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-sm font-medium hover:text-primary transition-colors relative pb-1 ${
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
               pathname === '/links' ? 'text-primary' : 'text-foreground'
             }`}
           >
@@ -102,7 +102,7 @@ export default function Header() {
           <a 
             href="/lgpd" 
             style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-sm font-medium hover:text-primary transition-colors relative pb-1 ${
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
               pathname === '/lgpd' ? 'text-primary' : 'text-foreground'
             }`}
           >
@@ -114,7 +114,7 @@ export default function Header() {
           <a 
             href={pathname === '/' ? '#contato' : '/#contato'} 
             style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors relative pb-1"
+            className="text-xs lg:text-sm font-medium text-foreground hover:text-primary transition-colors relative pb-1 whitespace-nowrap"
           >
             Contato
           </a>
@@ -122,7 +122,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2.5 text-primary hover:bg-primary/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="min-[771px]:hidden p-2.5 text-primary hover:bg-primary/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
@@ -140,14 +140,14 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-200"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 min-[771px]:hidden animate-in fade-in duration-200"
           onClick={closeMobileMenu}
         />
       )}
 
       {/* Mobile Menu */}
       <nav 
-        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

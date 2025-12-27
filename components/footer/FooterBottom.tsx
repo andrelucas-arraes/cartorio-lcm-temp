@@ -12,16 +12,11 @@ export default function FooterBottom() {
     <div className="border-t border-white/20 pt-8 mt-8">
       <div
         style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left text-xs text-white/70"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left text-xs text-white/70"
       >
         {/* Esquerda - Copyright */}
         <div>
           <p>Copyright © {new Date().getFullYear()} Cartório Luciana Carrilho de Moraes Marinho</p>
-        </div>
-
-        {/* Centro - Nome do Cartório */}
-        <div className="md:text-center">
-          <p>Luciana Carrilho de Moraes Marinho</p>
         </div>
 
         {/* Direita - Desenvolvimento */}
