@@ -1,18 +1,16 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import Image from '@/components/ui/image';
 import { Home, Briefcase, Link2, Shield, Mail, X } from 'lucide-react';
 
-
 export default function Header() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleDropdown = (menu: string) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -24,7 +22,10 @@ export default function Header() {
 
   // Fechar menu quando a rota mudar
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   // Prevenir scroll do body quando menu está aberto
@@ -52,77 +53,73 @@ export default function Header() {
       <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo-lcm.svg"
               alt="LCM Cartório"
               className="w-auto h-7 sm:h-8 md:h-10"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Desktop */}
         <nav className="hidden min-[771px]:flex items-center gap-3 min-[1018px]:gap-4 xl:gap-6 2xl:gap-8">
-          <a 
-            href="/" 
-            style={{ fontFamily: 'Source Sans Pro, sans-serif' }} 
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
-              pathname === '/' ? 'text-primary' : 'text-foreground'
-            }`}
+          <Link
+            href="/"
+            style={{ fontFamily: 'Source Sans Pro, sans-serif' }}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/' ? 'text-[#702125]' : 'text-foreground'
+              }`}
           >
             Início
             {pathname === '/' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
-          </a>
-          <a 
-            href="/nossos-servicos" 
-            style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
-              pathname === '/nossos-servicos' ? 'text-primary' : 'text-foreground'
-            }`}
+          </Link>
+          <a
+            href="/nossos-servicos"
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/nossos-servicos' ? 'text-[#702125]' : 'text-foreground'
+              }`}
           >
             Nossos Serviços
             {pathname === '/nossos-servicos' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
           </a>
-          <a 
-            href="/links" 
-            style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
-              pathname === '/links' ? 'text-primary' : 'text-foreground'
-            }`}
+          <a
+            href="/links"
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/links' ? 'text-[#702125]' : 'text-foreground'
+              }`}
           >
             Links Úteis
             {pathname === '/links' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
           </a>
-          <a 
-            href="/lgpd" 
-            style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-primary transition-colors relative pb-1 whitespace-nowrap ${
-              pathname === '/lgpd' ? 'text-primary' : 'text-foreground'
-            }`}
+          <a
+            href="/lgpd"
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/lgpd' ? 'text-[#702125]' : 'text-foreground'
+              }`}
           >
             LGPD
             {pathname === '/lgpd' && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></span>
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
           </a>
-          <a 
-            href={pathname === '/' ? '#contato' : '/#contato'} 
-            style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
-            className="text-xs lg:text-sm font-medium text-foreground hover:text-primary transition-colors relative pb-1 whitespace-nowrap"
+          <a
+            href={pathname === '/' ? '#contato' : '/#contato'}
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className="text-xs lg:text-sm font-medium text-foreground hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap"
           >
             Contato
           </a>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="min-[771px]:hidden p-2.5 text-primary hover:bg-primary/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        <button
+          className="min-[771px]:hidden p-2.5 text-[#702125] hover:bg-[#702125]/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#702125] focus:ring-offset-2"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={isMobileMenuOpen}
@@ -139,37 +136,36 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 min-[771px]:hidden animate-in fade-in duration-200"
           onClick={closeMobileMenu}
         />
       )}
 
       {/* Mobile Menu */}
-      <nav 
-        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <nav
+        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
-        {/* Header do Menu */}
-        <div className="bg-primary text-primary-foreground px-6 py-5 flex items-center justify-between shadow-lg">
+        {/* Header do Menu Mobile - AGORA COM A COR #702125 */}
+        <div className="bg-[#702125] text-white px-6 py-5 flex items-center justify-between shadow-lg">
           <div className="flex items-center">
-            <span style={{ fontFamily: "Montserrat, sans-serif" }} className="font-bold text-xl text-primary-foreground">
+            <span style={{ fontFamily: "Montserrat, sans-serif" }} className="font-bold text-xl text-white">
               Menu
             </span>
           </div>
           <button
             onClick={closeMobileMenu}
-            className="p-2 hover:bg-primary-foreground/25 active:bg-primary-foreground/30 rounded-lg transition-all duration-200 border border-primary-foreground/20 hover:border-primary-foreground/40"
+            className="p-2 hover:bg-white/20 active:bg-white/30 rounded-lg transition-all duration-200 border border-white/20 hover:border-white/40"
             aria-label="Fechar menu"
           >
-            <X className="w-6 h-6 text-primary-foreground" strokeWidth={3} />
+            <X className="w-6 h-6 text-white" strokeWidth={3} />
           </button>
         </div>
 
         {/* Menu Items */}
         <div className="flex flex-col h-[calc(100%-73px)] overflow-y-auto py-4">
-          {menuItems.map((item, index) => {
+          {menuItems.map((item) => {
             const Icon = item.icon;
             return (
               <a
@@ -177,28 +173,25 @@ export default function Header() {
                 href={item.href}
                 onClick={closeMobileMenu}
                 style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-                className={`group relative flex items-center gap-4 px-6 py-4 mx-3 mb-1 rounded-xl transition-all duration-200 ${
-                  item.isActive
-                    ? 'bg-primary text-primary-foreground shadow-md'
-                    : 'text-foreground hover:bg-primary/5 hover:text-primary'
-                }`}
+                className={`group relative flex items-center gap-4 px-6 py-4 mx-3 mb-1 rounded-xl transition-all duration-200 ${item.isActive
+                  ? 'bg-[#702125] text-white shadow-md'
+                  : 'text-foreground hover:bg-[#702125]/5 hover:text-[#702125]'
+                  }`}
               >
-                <div className={`flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-200 shrink-0 ${
-                  item.isActive
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'bg-primary/10 text-primary group-hover:bg-primary/20'
-                }`}>
+                <div className={`flex items-center justify-center w-11 h-11 rounded-xl transition-all duration-200 shrink-0 ${item.isActive
+                  ? 'bg-white/20 text-white'
+                  : 'bg-[#702125]/10 text-[#702125] group-hover:bg-[#702125]/20'
+                  }`}>
                   <Icon className="w-5 h-5" strokeWidth={2} />
                 </div>
-                <span className={`font-semibold text-base flex-1 ${item.isActive ? 'text-primary-foreground' : ''}`}>
+                <span className={`font-semibold text-base flex-1 ${item.isActive ? 'text-white' : ''}`}>
                   {item.label}
                 </span>
                 <svg
-                  className={`w-5 h-5 transition-transform duration-200 shrink-0 ${
-                    item.isActive 
-                      ? 'text-primary-foreground' 
-                      : 'text-foreground/30 group-hover:text-primary group-hover:translate-x-1'
-                  }`}
+                  className={`w-5 h-5 transition-transform duration-200 shrink-0 ${item.isActive
+                    ? 'text-white'
+                    : 'text-foreground/30 group-hover:text-[#702125] group-hover:translate-x-1'
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -206,7 +199,7 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
                 {item.isActive && (
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-primary-foreground rounded-r-full"></div>
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-white rounded-r-full"></div>
                 )}
               </a>
             );

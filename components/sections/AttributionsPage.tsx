@@ -1,5 +1,5 @@
 import AttributionCard from "@/components/cards/AttributionCard";
-import { Globe, Smartphone, Monitor } from 'lucide-react';
+
 
 export default function AttributionsPage() {
   const digitalServices = [
@@ -14,24 +14,6 @@ export default function AttributionsPage() {
     {
       icon: "/images/icon-building.png",
       title: "Serviços Digitais de Títulos",
-    },
-  ];
-
-  const platforms = [
-    {
-      name: "e-Notariado",
-      description: "Plataforma oficial para serviços notariais digitais",
-      icon: <Monitor className="w-8 h-8" />,
-    },
-    {
-      name: "e-Cartório",
-      description: "Sistema de serviços cartoriais online",
-      icon: <Globe className="w-8 h-8" />,
-    },
-    {
-      name: "Registro Civil Online",
-      description: "Plataforma para serviços de registro civil digital",
-      icon: <Smartphone className="w-8 h-8" />,
     },
   ];
 
@@ -73,39 +55,7 @@ export default function AttributionsPage() {
           ))}
         </div>
 
-        {/* Plataformas Digitais */}
-        <div className="mb-8 md:mb-12">
-          <h3
-            style={{ fontFamily: "Montserrat, sans-serif" }}
-            className="font-bold text-xl sm:text-2xl md:text-3xl text-white text-center mb-6 md:mb-8"
-          >
-            Plataformas Disponíveis
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {platforms.map((platform, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20"
-              >
-                <div className="flex justify-center mb-4 text-white">
-                  {platform.icon}
-                </div>
-                <h4
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
-                  className="font-bold text-lg text-white mb-2"
-                >
-                  {platform.name}
-                </h4>
-                <p
-                  style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-                  className="text-sm text-white/80"
-                >
-                  {platform.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
 
       {/* Corte diagonal inferior */}

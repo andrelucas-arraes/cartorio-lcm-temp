@@ -1,3 +1,5 @@
+import Image from '@/components/ui/image';
+
 /**
  * FooterLogo Component
  * 
@@ -13,7 +15,7 @@ export default function FooterLogo() {
         style={{ fontFamily: "Montserrat, sans-serif" }}
         className="font-black text-6xl md:text-7xl lg:text-8xl text-white leading-none"
       >
-        <img src="/images/logo-footer.svg" alt="" />
+        <Image src="/images/logo-footer.svg" alt="LCM" />
       </h2>
     </div>
   );

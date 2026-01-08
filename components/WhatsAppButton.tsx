@@ -1,3 +1,4 @@
+import Image from '@/components/ui/image';
 
 export default function WhatsAppButton() {
   const whatsappNumber = '558698718166'; // +55 (86) 98871-8166
@@ -13,7 +14,7 @@ export default function WhatsAppButton() {
       aria-label="Abrir WhatsApp"
       title="Fale conosco no WhatsApp"
     >
-      <img src="images/image.png" alt="" className="w-8 h-8"/>
+      <Image src="/images/image.png" alt="WhatsApp" className="w-8 h-8" />
     </a>
   );
 }

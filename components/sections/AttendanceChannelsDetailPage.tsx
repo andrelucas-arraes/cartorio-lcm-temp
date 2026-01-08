@@ -174,14 +174,14 @@ export default function AttendanceChannelsDetailPage() {
           </div>
         </div>
 
-        {/* Mapa (Opcional) */}
-        <div className="bg-white border border-border rounded-lg overflow-hidden">
+        {/* Mapa */}
+        <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm">
           <iframe
-            title="Localização do Cartório"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.6789!2d-41.2!3d-4.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzAnMDAuMCJTIDQxwrAxMicwMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            title="Localização do Cartório Luciana Carrilho"
+            src="https://maps.google.com/maps?q=Rua+Benedito+Brito+352+Centro+Alto+Longa+PI&t=m&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%"
-            height="300"
-            className="h-[300px] sm:h-[400px]"
+            height="450"
+            className="h-[300px] sm:h-[450px]"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
