@@ -41,7 +41,7 @@ export default function AttendanceChannelsDetailPage() {
               <p>
                 <span className="font-semibold">Horário:</span>
                 <br />
-                Segunda a Sexta: 08h às 17h
+                Segunda a Sexta: 08h às 14h
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function AttendanceChannelsDetailPage() {
               <p>
                 <span className="font-semibold">Horário:</span>
                 <br />
-                Segunda a Sexta: 08h às 17h
+                Segunda a Sexta: 08h às 14h
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function AttendanceChannelsDetailPage() {
                 <p>
                   <span className="font-semibold">Segunda a Sexta:</span>
                   <br />
-                  08h às 17h
+                  08h às 14h
                 </p>
                 <p>
                   <span className="font-semibold">Sábado e Domingo:</span>
