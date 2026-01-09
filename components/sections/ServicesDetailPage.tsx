@@ -170,7 +170,6 @@ export default function ServicesDetailPage() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-4 flex-1 min-w-0">
                   <div className="bg-white/20 p-3 rounded-xl flex-shrink-0 text-white [&_svg]:w-12 [&_svg]:h-12 [&_svg]:text-white">
-                    {/* Clona o ícone e força a cor branca dentro do header vermelho */}
                     {React.cloneElement(selectedService.icon as React.ReactElement<{ className?: string }>, { className: "w-12 h-12 text-white" })}                  </div>
                   <div className="flex-1 min-w-0">
                     <h3

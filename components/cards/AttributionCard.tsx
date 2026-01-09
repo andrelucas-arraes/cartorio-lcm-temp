@@ -5,16 +5,16 @@ interface AttributionCardProps {
   icon: React.ReactNode;
   title: string;
   description?: string;
-  href: string; // Nova propriedade obrigatória
+  href: string; 
 }
 
 export default function AttributionCard({ icon, title, description, href }: AttributionCardProps) {
   return (
     <Link 
       href={href}
-      target="_blank" // Abre em nova aba
-      rel="noopener noreferrer" // Segurança para novos tabs
-      className="block h-full" // Garante que o link ocupe toda a altura do grid
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="block h-full"
     >
       <div className="bg-primary/20 border-2 border-white/30 rounded-2xl p-8 text-center hover:border-white/60 transition-all duration-300 transform hover:scale-105 h-full flex flex-col items-center justify-center cursor-pointer">
         {/* Container do Ícone */}

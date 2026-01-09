@@ -7,32 +7,32 @@ export default function AttributionsPage() {
     {
       icon: <Home className="w-12 h-12 text-white" />,
       title: "Registro de Imóveis",
-      href: "https://registradores.onr.org.br/", // Exemplo: Link do SAEC
+      href: "https://registradores.onr.org.br/", 
     },
     {
       icon: <FileText className="w-12 h-12 text-white" />,
       title: "Tabelionato de Notas",
-      href: "https://www.e-notariado.org.br/", // Exemplo: Link do e-Notariado
+      href: "https://www.e-notariado.org.br/", 
     },
     {
       icon: <Users className="w-12 h-12 text-white" />,
       title: "Registro Civil das Pessoas Naturais",
-      href: "https://www.registrocivil.org.br/", // Exemplo: Link do Registro Civil
+      href: "https://www.registrocivil.org.br/", 
     },
     {
       icon: <FileStack className="w-12 h-12 text-white" />,
       title: "Registro de Títulos e Documentos",
-      href: "https://www.rtdbrasil.org.br/", // Exemplo: Link do RTD
+      href: "https://www.rtdbrasil.org.br/", 
     },
     {
       icon: <Building2 className="w-12 h-12 text-white" />,
       title: "Registro Civil das Pessoas Jurídicas",
-      href: "https://www.rtdbrasil.org.br/", // Geralmente é o mesmo portal do RTD
+      href: "https://www.rtdbrasil.org.br/", 
     },
     {
       icon: <Banknote className="w-12 h-12 text-white" />,
       title: "Protesto de Títulos",
-      href: "https://site.cenprotnacional.org.br/", // Exemplo: Cenprot
+      href: "https://site.cenprotnacional.org.br/", 
     },
   ];
 
@@ -70,7 +70,7 @@ export default function AttributionsPage() {
               key={index}
               icon={service.icon}
               title={service.title}
-              href={service.href} // Passando o link aqui
+              href={service.href} 
             />
           ))}
         </div>

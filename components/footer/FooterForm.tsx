@@ -40,13 +40,11 @@ export default function FooterForm() {
 
   return (
     <div className="space-y-6">
-      {/* Título idêntico ao FooterNavigation (sem margem inferior manual, controlado pelo space-y-6 do pai) */}
       <h3 style={{ fontFamily: "Montserrat, sans-serif" }} className="font-bold text-lg text-white">
         Fale Conosco
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Nome e Sobrenome - lado a lado em desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input
             type="text"

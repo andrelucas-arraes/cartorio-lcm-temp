@@ -48,10 +48,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      {/* ALTERAÇÃO AQUI: 
-         Reduzi o 'py-3 sm:py-4' para 'py-1 sm:py-2'. 
-         Isso diminui o espaço sobrando em cima e em baixo, compensando a logo maior.
-      */}
       <div className="container mx-auto px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between">
         
         {/* Logo Grande */}

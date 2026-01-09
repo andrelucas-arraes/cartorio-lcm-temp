@@ -6,7 +6,6 @@ import FooterBottom from '@/components/footer/FooterBottom';
 
 export default function Footer() {
   return (
-    // Alterado bg-primary para bg-[#702125] e text-primary-foreground para text-white
     <footer className="bg-[#511C23] text-white">
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Grid de 3 colunas */}

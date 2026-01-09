@@ -124,7 +124,6 @@ const LinksContentSection: React.FC = () => {
                       rel="noopener noreferrer"
                       className="group flex items-start text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-[#702125] transition duration-150 ease-in-out"
                     >
-                      {/* Ícone com alinhamento ajustado (mt-1) */}
                       <svg className="w-5 h-5 mr-2 mt-1 text-gray-400 group-hover:text-[#702125] flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                       </svg>

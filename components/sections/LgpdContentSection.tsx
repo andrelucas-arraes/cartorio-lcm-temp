@@ -1,7 +1,6 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react'; // Importando ícone
+import { MessageCircle } from 'lucide-react'; 
 
-// Interface para estruturar os dados da LGPD
 interface LgpdSectionData {
   title: string;
   content: string | string[];

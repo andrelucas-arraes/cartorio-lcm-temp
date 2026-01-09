@@ -116,12 +116,11 @@ const ServicesContentSection: React.FC = () => {
         <div className="space-y-12">
           {servicesData.map((service, index) => (
             <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
-              {/* Título com a cor da marca */}
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {service.title}
               </h2>
 
-              {/* Descrição: Adicionado 'hyphens-auto' para quebrar palavras longas */}
+              {/* Descrição */}
               <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                 {service.description}
               </p>
@@ -130,7 +129,7 @@ const ServicesContentSection: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
                   Principais Serviços:
                 </h3>
-                {/* Lista: Adicionado 'hyphens-auto' */}
+                {/* Lista */}
                 <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 dark:text-gray-300 ml-4">
                   {service.items.map((item, idx) => (
                     <li key={idx} className="text-justify hyphens-auto leading-snug">
@@ -140,7 +139,7 @@ const ServicesContentSection: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Box de Informação: Adicionado 'hyphens-auto' */}
+              {/* Box de Informação */}
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border-l-4 border-gray-300 dark:border-gray-600">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                   {service.noteTitle}

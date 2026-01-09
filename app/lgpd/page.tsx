@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
-import Header from '@/components/Header'; 
-import Footer from '@/components/Footer'; 
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 import HeroSection from '@/components/sections/HeroSection';
 import LgpdContentSection from '@/components/sections/LgpdContentSection';
@@ -13,23 +13,23 @@ const LgpdPage: React.FC = () => {
     // Estrutura principal da página
     <div className="w-full min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
-      
+
       <main className="flex-grow">
-        <HeroSection 
+        <HeroSection
           title="LGPD - Lei Geral de Proteção de Dados"
           subtitle="Informações sobre como tratamos seus dados pessoais e quais são seus direitos conforme a Lei Geral de Proteção de Dados."
           backgroundImageUrl="/images/hero-aerea.jpg"
         />
-        
+
         {/* Seção de conteúdo */}
         <LgpdContentSection />
-        
+
         {/* Seção de ação */}
-        <ActionSection />   
+        <ActionSection />
       </main>
-      
+
       <Footer />
-      
+
     </div>
   );
 };
