@@ -16,7 +16,7 @@ export default function FooterBottom() {
       >
         {/* Esquerda - Copyright */}
         <div>
-          <p>Copyright © {new Date().getFullYear()} Cartório Luciana Carrilho de Moraes Marinho</p>
+          <p>Copyright © {new Date().getFullYear()} Cartório Luciana Carrilho de Moraes Marinho - CNPJ 55.429.936/0001-24</p>
         </div>
 
         {/* Direita - Desenvolvimento */}

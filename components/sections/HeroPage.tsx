@@ -40,7 +40,7 @@ export default function HeroPage() {
           <a
             href="#contato"
             style={{ fontFamily: "Montserrat, sans-serif" }}
-            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-all duration-300 text-sm sm:text-base text-center"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-300 text-sm sm:text-base text-center"
           >
             Contato
           </a>
