@@ -54,7 +54,7 @@ const services: Service[] = [
     id: 'registro-civil-naturais',
     title: 'Registro Civil das Pessoas Naturais',
     icon: <Users className="w-12 h-12 text-[#702125]" />,
-    description: 'Registro de nascimentos, casamentos e óbitos',
+    description: 'Registro de nascimentos, casamentos e óbitos.',
     details: [
       'Registro de nascimento',
       'Registro de casamento',
