@@ -2,7 +2,10 @@ import React from 'react';
 import AttributionCard from "@/components/cards/AttributionCard";
 import { Home, FileText, Users, FileStack, Banknote, Building2 } from 'lucide-react';
 
+// Componente da página de Atribuições/Serviços Digitais
 export default function AttributionsPage() {
+  
+  // 1. Configuração dos dados dos cards (Ícone, Título e Link externo)
   const digitalServices = [
     {
       icon: <Home className="w-12 h-12 text-white" />,
@@ -37,6 +40,7 @@ export default function AttributionsPage() {
   ];
 
   return (
+    // 2. Container da seção com fundo personalizado (Gradiente + Imagem Pattern)
     <section
       className="relative w-full py-12 sm:py-16 md:py-24"
       style={{
@@ -45,7 +49,7 @@ export default function AttributionsPage() {
         backgroundBlendMode: "overlay",
       }}
     >
-      {/* Corte diagonal superior */}
+      {/* 3. Elemento visual: Recorte diagonal na borda superior */}
       <div
         className="absolute top-0 left-0 right-0 h-16 md:h-24 bg-background"
         style={{
@@ -55,7 +59,8 @@ export default function AttributionsPage() {
       ></div>
 
       <div className="container mx-auto px-4 pt-8 md:pt-12">
-        {/* Título */}
+        
+        {/* 4. Título da seção */}
         <h2
           style={{ fontFamily: "Montserrat, sans-serif" }}
           className="font-black text-2xl sm:text-3xl md:text-4xl text-white text-center mb-8 md:mb-16"
@@ -63,7 +68,7 @@ export default function AttributionsPage() {
           SERVIÇOS DIGITAIS
         </h2>
 
-        {/* Grid de Cards de Serviços */}
+        {/* 5. Grid de Cards: Mapeia o array 'digitalServices' para renderizar os componentes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {digitalServices.map((service, index) => (
             <AttributionCard
@@ -76,7 +81,7 @@ export default function AttributionsPage() {
         </div>
       </div>
 
-      {/* Corte diagonal inferior */}
+      {/* 6. Elemento visual: Recorte diagonal na borda inferior */}
       <div
         className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-background"
         style={{

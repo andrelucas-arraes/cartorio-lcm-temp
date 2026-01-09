@@ -1,12 +1,14 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
-
+// Componente principal da página de Detalhes dos Canais de Atendimento
 export default function AttendanceChannelsDetailPage() {
   return (
+    // Container principal da seção com padding responsivo e cor de fundo
     <section id='contato' className="w-full py-12 sm:py-16 md:py-24 bg-background ">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Título */}
+        
+        {/* 1. Título da Seção */}
         <h2
           style={{ fontFamily: "Montserrat, sans-serif" }}
           className="font-bold text-2xl sm:text-3xl text-primary text-center mb-8 sm:mb-12 md:mb-16"
@@ -14,9 +16,11 @@ export default function AttendanceChannelsDetailPage() {
           Canais de Atendimento
         </h2>
 
-        {/* Grid de Canais */}
+        {/* 2. Grid de Cards de Contato (Telefone, Email, WhatsApp) */}
+        {/* Layout responsivo: 1 coluna (mobile), 2 (tablet), 3 (desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-          {/* Telefone */}
+          
+          {/* Card: Telefone */}
           <div className="bg-white border border-border rounded-lg p-6 sm:p-8">
             <div className="mb-4">
               <Phone className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
@@ -46,7 +50,7 @@ export default function AttendanceChannelsDetailPage() {
             </div>
           </div>
 
-          {/* Email */}
+          {/* Card: Email */}
           <div className="bg-white border border-border rounded-lg p-6 sm:p-8">
             <div className="mb-4">
               <Mail className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
@@ -79,7 +83,7 @@ export default function AttendanceChannelsDetailPage() {
             </div>
           </div>
 
-          {/* WhatsApp */}
+          {/* Card: WhatsApp */}
           <div className="bg-white border border-border rounded-lg p-6 sm:p-8">
             <div className="mb-4">
               <FaWhatsapp className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
@@ -115,10 +119,11 @@ export default function AttendanceChannelsDetailPage() {
           </div>
         </div>
 
-        {/* Endereço Físico */}
+        {/* 3. Seção de Informações Presenciais (Endereço e Horário de Funcionamento) */}
         <div className="bg-white border border-border rounded-lg p-6 sm:p-8 mb-12 sm:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {/* Informações */}
+            
+            {/* Bloco: Endereço Físico */}
             <div>
               <h3
                 style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -146,7 +151,7 @@ export default function AttendanceChannelsDetailPage() {
               </div>
             </div>
 
-            {/* Horário de Funcionamento */}
+            {/* Bloco: Horário de Funcionamento Detalhado */}
             <div>
               <h3
                 style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -174,7 +179,7 @@ export default function AttendanceChannelsDetailPage() {
           </div>
         </div>
 
-        {/* Mapa */}
+        {/* 4. Embed do Google Maps */}
         <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm">
           <iframe
             title="Localização do Cartório Luciana Carrilho"
@@ -188,6 +193,7 @@ export default function AttendanceChannelsDetailPage() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
       </div>
     </section>
   );

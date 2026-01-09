@@ -1,11 +1,13 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react'; 
 
+// 1. Definição da Interface para os dados das seções
 interface LgpdSectionData {
   title: string;
   content: string | string[];
 }
 
+// 2. Base de Dados do Conteúdo (Texto estático da LGPD)
 const lgpdData: LgpdSectionData[] = [
   {
     title: "Nosso Compromisso com a Proteção de Dados",
@@ -51,27 +53,32 @@ const lgpdData: LgpdSectionData[] = [
   }
 ];
 
+// Componente Principal da Seção de Conteúdo LGPD
 const LgpdContentSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
 
-        {/* Introdução */}
+        {/* 3. Introdução Geral */}
         <div className="mb-10 animate-in fade-in duration-500 slide-in-from-bottom-4">
           <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed">
             Informações sobre como tratamos seus dados pessoais e quais são seus direitos conforme a Lei Geral de Proteção de Dados (LGPD).
           </p>
         </div>
 
-        {/* Conteúdo */}
+        {/* 4. Renderização Dinâmica do Conteúdo (Loop) */}
         <div className="space-y-12 mb-16">
           {lgpdData.map((section, index) => (
             <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
+              
+              {/* Título da Seção com detalhe visual na borda esquerda */}
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {section.title}
               </h2>
 
+              {/* 5. Lógica Condicional: Verifica se o conteúdo é Texto ou Lista */}
               {Array.isArray(section.content) ? (
+                // Se for Array: Renderiza parágrafo introdutório + Lista de itens
                 <>
                   <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                     {section.content[0]}
@@ -85,6 +92,7 @@ const LgpdContentSection: React.FC = () => {
                   </ul>
                 </>
               ) : (
+                // Se for String: Renderiza apenas um parágrafo simples
                 <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed">
                   {section.content}
                 </p>
@@ -93,7 +101,7 @@ const LgpdContentSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Botão de WhatsApp */}
+        {/* 6. Rodapé: Botão de Ação (WhatsApp) */}
         <div className="flex flex-col items-center justify-center pt-8 border-t border-gray-200 dark:border-gray-700 animate-in fade-in duration-500 slide-in-from-bottom-4">
           <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">
             Ainda tem dúvidas sobre seus dados?

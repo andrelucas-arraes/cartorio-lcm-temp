@@ -1,11 +1,17 @@
 import { FaWhatsapp } from 'react-icons/fa';
 
 export default function WhatsAppButton() {
+  
+  // 1. Configuração dos dados de contato e mensagem
   const phoneNumber = '558698718166';
   const message = 'Olá! Gostaria de mais informações sobre os serviços do cartório.';
+  
+  // Cria a URL formatada (codificando a mensagem para URL segura)
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
+    // 2. Botão Flutuante (Fixed)
+    // Posicionado no canto inferior direito (bottom-6 right-6) com Z-Index alto
     <a
       href={whatsappUrl}
       target="_blank"

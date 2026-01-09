@@ -7,26 +7,22 @@ import { Home, Briefcase, Link2, Shield, Mail, X } from 'lucide-react';
 
 export default function Header() {
 
+  // 1. Estado e Hooks
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  // Funções de controle do menu
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  // Fechar menu quando a rota mudar
+  // 2. Efeitos (Side Effects)
+  // Fecha o menu automaticamente quando a rota muda
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
+    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  // Prevenir scroll do body quando menu está aberto
+  // Bloqueia o scroll da página (body) quando o menu mobile está aberto
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -38,6 +34,7 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  // 3. Configuração dos Itens do Menu
   const menuItems = [
     { href: '/', label: 'Início', icon: Home, isActive: pathname === '/' },
     { href: '/nossos-servicos', label: 'Nossos Serviços', icon: Briefcase, isActive: pathname === '/nossos-servicos' },
@@ -47,10 +44,11 @@ export default function Header() {
   ];
 
   return (
+    // 4. Estrutura Principal do Header (Fixo no topo)
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between">
         
-        {/* Logo Grande */}
+        {/* Logo do Cartório */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
             <Image
@@ -61,13 +59,12 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Navigation Desktop */}
+        {/* 5. Navegação Desktop (Visível apenas em telas maiores) */}
         <nav className="hidden min-[771px]:flex items-center gap-3 min-[1018px]:gap-4 xl:gap-6 2xl:gap-8">
           <Link
             href="/"
             style={{ fontFamily: 'Source Sans Pro, sans-serif' }}
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/' ? 'text-[#702125]' : 'text-foreground'
-              }`}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/' ? 'text-[#702125]' : 'text-foreground'}`}
           >
             Início
             {pathname === '/' && (
@@ -77,8 +74,7 @@ export default function Header() {
           <a
             href="/nossos-servicos"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/nossos-servicos' ? 'text-[#702125]' : 'text-foreground'
-              }`}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/nossos-servicos' ? 'text-[#702125]' : 'text-foreground'}`}
           >
             Nossos Serviços
             {pathname === '/nossos-servicos' && (
@@ -88,8 +84,7 @@ export default function Header() {
           <a
             href="/links"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/links' ? 'text-[#702125]' : 'text-foreground'
-              }`}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/links' ? 'text-[#702125]' : 'text-foreground'}`}
           >
             Links Úteis
             {pathname === '/links' && (
@@ -99,8 +94,7 @@ export default function Header() {
           <a
             href="/lgpd"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/lgpd' ? 'text-[#702125]' : 'text-foreground'
-              }`}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/lgpd' ? 'text-[#702125]' : 'text-foreground'}`}
           >
             LGPD
             {pathname === '/lgpd' && (
@@ -116,7 +110,7 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Botão Hambúrguer (Mobile) */}
         <button
           className="min-[771px]:hidden p-2.5 text-[#702125] hover:bg-[#702125]/10 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#702125] focus:ring-offset-2"
           onClick={toggleMobileMenu}
@@ -133,7 +127,9 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* 6. Menu Mobile (Drawer e Overlay) */}
+      
+      {/* Overlay Escuro */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 min-[771px]:hidden animate-in fade-in duration-200"
@@ -141,11 +137,11 @@ export default function Header() {
         />
       )}
 
-      {/* Mobile Menu */}
+      {/* Drawer Lateral */}
       <nav
-        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+        className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
+        {/* Cabeçalho do Menu Mobile */}
         <div className="bg-[#702125] text-white px-6 py-5 flex items-center justify-between shadow-lg">
           <div className="flex items-center">
             <span style={{ fontFamily: "Montserrat, sans-serif" }} className="font-bold text-xl text-white">
@@ -161,6 +157,7 @@ export default function Header() {
           </button>
         </div>
 
+        {/* Lista de Links Mobile */}
         <div className="flex flex-col h-[calc(100%-73px)] overflow-y-auto py-4">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -203,6 +200,7 @@ export default function Header() {
           })}
         </div>
 
+        {/* Rodapé do Menu Mobile */}
         <div className="border-t border-gray-200 px-6 py-4 bg-gray-50/50">
           <p style={{ fontFamily: "Source Sans Pro, sans-serif" }} className="text-xs text-foreground/60 text-center">
             © {new Date().getFullYear()} Cartório LCM

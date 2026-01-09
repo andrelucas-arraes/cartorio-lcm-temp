@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, FileText, Home, Users, Building2, FileStack, DollarSign } from 'lucide-react';
 
+// 1. Interface: Define a estrutura de dados para cada serviço
 interface Service {
   id: string;
   title: string;
@@ -9,6 +10,7 @@ interface Service {
   details: string[];
 }
 
+// 2. Base de Dados: Lista estática contendo todos os serviços e seus detalhes
 const services: Service[] = [
   {
     id: 'tabelionato-notas',
@@ -110,13 +112,16 @@ const services: Service[] = [
   },
 ];
 
+// Componente Principal da Página de Detalhes de Serviços
 export default function ServicesDetailPage() {
+  // 3. Estado: Controla qual serviço está selecionado para exibir no Modal (null = modal fechado)
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Título */}
+        
+        {/* Título da Seção */}
         <h2
           style={{ fontFamily: "Montserrat, sans-serif" }}
           className="font-bold text-2xl sm:text-3xl text-[#702125] text-center mb-8 sm:mb-12 md:mb-16"
@@ -124,7 +129,7 @@ export default function ServicesDetailPage() {
           Nossos Serviços
         </h2>
 
-        {/* Grid de Cards */}
+        {/* 4. Grid de Cards: Menu Principal */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service) => (
             <button
@@ -155,22 +160,25 @@ export default function ServicesDetailPage() {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* 5. Modal de Detalhes (Renderização Condicional) */}
       {selectedService && (
         <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-200"
-          onClick={() => setSelectedService(null)}
+          onClick={() => setSelectedService(null)} // Fecha ao clicar fora
         >
           <div
             className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()} // Previne fechamento ao clicar dentro do modal
           >
-            {/* Header com a cor da marca */}
+            
+            {/* Header do Modal: Fundo colorido e Ícone */}
             <div className="bg-[#702125] text-white p-6 sm:p-8">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-4 flex-1 min-w-0">
                   <div className="bg-white/20 p-3 rounded-xl flex-shrink-0 text-white [&_svg]:w-12 [&_svg]:h-12 [&_svg]:text-white">
-                    {React.cloneElement(selectedService.icon as React.ReactElement<{ className?: string }>, { className: "w-12 h-12 text-white" })}                  </div>
+                    {/* Clona o ícone para forçar a cor branca dentro do modal */}
+                    {React.cloneElement(selectedService.icon as React.ReactElement<{ className?: string }>, { className: "w-12 h-12 text-white" })}
+                  </div>
                   <div className="flex-1 min-w-0">
                     <h3
                       style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -186,6 +194,8 @@ export default function ServicesDetailPage() {
                     </p>
                   </div>
                 </div>
+                
+                {/* Botão de Fechar (X) */}
                 <button
                   onClick={() => setSelectedService(null)}
                   className="text-white hover:bg-white/20 active:bg-white/30 p-2 rounded-lg transition-all duration-200 flex-shrink-0 border border-white/20 hover:border-white/40"
@@ -196,7 +206,7 @@ export default function ServicesDetailPage() {
               </div>
             </div>
 
-            {/* Conteúdo */}
+            {/* Conteúdo do Modal: Lista de serviços incluídos */}
             <div className="p-6 sm:p-8 overflow-y-auto max-h-[calc(90vh-180px)]">
               <div className="mb-6">
                 <h4
@@ -208,6 +218,7 @@ export default function ServicesDetailPage() {
                 </h4>
               </div>
 
+              {/* Lista em Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {selectedService.details.map((detail, index) => (
                   <div
@@ -229,7 +240,7 @@ export default function ServicesDetailPage() {
                 ))}
               </div>
 
-              {/* Botões de ação */}
+              {/* Botões de Ação do Rodapé */}
               <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-200">
                 <a
                   href="#contato"

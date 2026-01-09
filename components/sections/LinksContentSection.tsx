@@ -1,18 +1,17 @@
 import React from 'react';
 
-// Interface para a estrutura de um link
+// 1. Interfaces: Definem a estrutura dos dados (Tipagem TypeScript)
 interface LinkItem {
   name: string;
   url: string;
 }
 
-// Interface para a categoria de links
 interface LinkCategory {
   title: string;
   links: LinkItem[];
 }
 
-// Dados completos organizados por categoria
+// 2. Base de Dados: Array contendo todas as categorias e links externos
 const linkCategories: LinkCategory[] = [
   {
     title: 'Tabelionato de Notas',
@@ -94,30 +93,35 @@ const linkCategories: LinkCategory[] = [
   },
 ];
 
+// Componente Principal da Seção de Conteúdo de Links Úteis
 const LinksContentSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
 
-        {/* Texto Introdutório Justificado e com Animação */}
+        {/* 3. Introdução: Texto explicativo com animação de entrada */}
         <div className="mb-10 animate-in fade-in duration-500 slide-in-from-bottom-4">
           <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed">
             Neste módulo disponibilizamos diversos links de sites relacionados à nossa serventia e/ou informações de legislações pertinentes.
           </p>
         </div>
 
-        {/* Renderização das Categorias */}
+        {/* 4. Renderização das Categorias: Loop através do array 'linkCategories' */}
         <div className="space-y-12">
           {linkCategories.map((category, index) => (
             <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
-              {/* Título com a borda vermelha */}
+
+              {/* Título da Categoria com borda lateral estilizada */}
               <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {category.title}
               </h3>
 
+              {/* 5. Lista de Links: Grid responsivo (1 coluna mobile, 2 colunas desktop) */}
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex} className="flex items-start">
+
+                    {/* Link Externo com Ícone */}
                     <a
                       href={link.url}
                       target="_blank"

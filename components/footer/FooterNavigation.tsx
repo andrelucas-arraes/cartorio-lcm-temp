@@ -1,11 +1,8 @@
-/**
- * FooterNavigation Component
- * 
- * Exibe links de navegação com indicadores.
- * - Título "Navegar"
- * - Links com ChevronRight
- * - Organização em coluna
- */
+// =====================================
+// FOOTER NAVIGATION
+// =====================================
+// Links de navegação do footer
+
 export default function FooterNavigation() {
   const links = [
     { label: "Início", href: "/" },

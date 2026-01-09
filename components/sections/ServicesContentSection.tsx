@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Interface para tipagem dos dados
+// 1. Interface: Define a estrutura de dados para cada seção de serviço
 interface ServiceSection {
   title: string;
   description: string;
@@ -9,6 +9,7 @@ interface ServiceSection {
   noteContent: string;
 }
 
+// 2. Base de Dados de Serviços: Contém informações detalhadas sobre cada serviço oferecido
 const servicesData: ServiceSection[] = [
   {
     title: "Tabelionato de Notas",
@@ -108,28 +109,32 @@ const servicesData: ServiceSection[] = [
   }
 ];
 
+// Componente Principal da Seção de Conteúdo de Serviços
 const ServicesContentSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
         
+        {/* 3. Renderização Dinâmica dos Serviços (Loop) */}
         <div className="space-y-12">
           {servicesData.map((service, index) => (
             <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
+              
+              {/* Título do Serviço com destaque visual na borda esquerda */}
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {service.title}
               </h2>
 
-              {/* Descrição */}
+              {/* Descrição Geral */}
               <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                 {service.description}
               </p>
 
+              {/* Lista Detalhada de Serviços */}
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
                   Principais Serviços:
                 </h3>
-                {/* Lista */}
                 <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 dark:text-gray-300 ml-4">
                   {service.items.map((item, idx) => (
                     <li key={idx} className="text-justify hyphens-auto leading-snug">
@@ -139,7 +144,7 @@ const ServicesContentSection: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Box de Informação */}
+              {/* 4. Box de Informação Adicional/Notas */}
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border-l-4 border-gray-300 dark:border-gray-600">
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                   {service.noteTitle}

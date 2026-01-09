@@ -1,13 +1,10 @@
+// =====================================
+// FOOTER LOGO
+// =====================================
+// Logo do cartório no footer
+
 import Image from '@/components/ui/image';
 
-/**
- * FooterLogo Component
- * 
- * Exibe o logo "LCM" em grande tamanho no footer.
- * - Fonte serifada e espessa
- * - Cor branca
- * - Tamanho responsivo (70px a 110px)
- */
 export default function FooterLogo() {
   return (
     <div className="flex items-center justify-center">

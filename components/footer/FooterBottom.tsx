@@ -1,12 +1,8 @@
-/**
- * FooterBottom Component
- * 
- * Linha inferior do footer com:
- * - Copyright à esquerda
- * - Nome do cartório no centro
- * - Desenvolvimento à direita
- * - Linha divisória superior
- */
+// =====================================
+// FOOTER BOTTOM
+// =====================================
+// Linha inferior do footer com copyright e créditos
+
 export default function FooterBottom() {
   return (
     <div className="border-t border-white/20 pt-8 mt-8">
@@ -14,12 +10,12 @@ export default function FooterBottom() {
         style={{ fontFamily: "Source Sans Pro, sans-serif" }}
         className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left text-xs text-white/70"
       >
-        {/* Esquerda - Copyright */}
+        {/* Copyright */}
         <div>
           <p>Copyright © {new Date().getFullYear()} Cartório Luciana Carrilho de Moraes Marinho - CNPJ 55.429.936/0001-24</p>
         </div>
 
-        {/* Direita - Desenvolvimento */}
+        {/* Créditos de desenvolvimento */}
         <div className="md:text-right">
           <p className="text-white/90 font-medium inline">
             Desenvolvido por:{' '}

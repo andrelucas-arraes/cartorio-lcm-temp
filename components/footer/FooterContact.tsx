@@ -1,3 +1,8 @@
+// =====================================
+// FOOTER CONTACT
+// =====================================
+// Informações de contato do cartório
+
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 

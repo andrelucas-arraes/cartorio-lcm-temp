@@ -1,5 +1,9 @@
-import Image from '@/components/ui/image';
+// =====================================
+// SERVICE CARD
+// =====================================
+// Card para exibir serviços do cartório
 
+import Image from '@/components/ui/image';
 
 interface ServiceCardProps {
   icon: string;
@@ -28,7 +32,7 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
         {title}
       </h3>
 
-      {/* Descrição */}
+      {/* Descrição (opcional) */}
       {description && (
         <p style={{ fontFamily: "Source Sans Pro, sans-serif" }} className=" text-sm text-muted-foreground">
           {description}

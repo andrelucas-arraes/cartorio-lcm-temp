@@ -1,13 +1,10 @@
+// =====================================
+// FOOTER FORM
+// =====================================
+// Formulário de contato que envia mensagem via WhatsApp
+
 import { useState } from 'react';
 
-/**
- * FooterForm Component
- * * Formulário de contato no footer.
- * Estrutura atualizada para alinhar com FooterNavigation:
- * - Container principal com space-y-6
- * - Título fora do form
- * - Form com space-y-4 (para manter os inputs mais próximos entre si)
- */
 export default function FooterForm() {
   const [formData, setFormData] = useState({
     nome: '',
@@ -24,6 +21,7 @@ export default function FooterForm() {
     }));
   };
 
+  // Envia dados do formulário via WhatsApp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -35,6 +33,7 @@ export default function FooterForm() {
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
 
+    // Limpa o formulário após envio
     setFormData({ nome: '', sobrenome: '', email: '', mensagem: '' });
   };
 
@@ -45,6 +44,7 @@ export default function FooterForm() {
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Nome e Sobrenome */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input
             type="text"

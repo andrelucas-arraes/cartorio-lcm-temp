@@ -1,3 +1,8 @@
+// =====================================
+// ATTRIBUTION CARD
+// =====================================
+// Card clicável para exibir atribuições do cartório
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -17,7 +22,7 @@ export default function AttributionCard({ icon, title, description, href }: Attr
       className="block h-full"
     >
       <div className="bg-primary/20 border-2 border-white/30 rounded-2xl p-8 text-center hover:border-white/60 transition-all duration-300 transform hover:scale-105 h-full flex flex-col items-center justify-center cursor-pointer">
-        {/* Container do Ícone */}
+        {/* Ícone */}
         <div className="flex justify-center mb-6">
           {icon}
         </div>
@@ -30,7 +35,7 @@ export default function AttributionCard({ icon, title, description, href }: Attr
           {title}
         </h3>
 
-        {/* Descrição */}
+        {/* Descrição (opcional) */}
         {description && (
           <p 
             style={{ fontFamily: "Source Sans Pro, sans-serif" }} 
