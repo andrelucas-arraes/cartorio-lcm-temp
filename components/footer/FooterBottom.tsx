@@ -24,6 +24,15 @@ export default function FooterBottom() {
           <p className="text-white/90 font-medium inline">
             Desenvolvido por:{' '}
             <a
+              href="https://github.com/andrearraesDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
+            >
+              André Arraes
+            </a>
+            {', '}
+            <a
               href="https://gabriellucasafb.com.br/"
               target="_blank"
               rel="noopener noreferrer"
@@ -31,7 +40,7 @@ export default function FooterBottom() {
             >
               Gabriel Lucas
             </a>
-            {', '}
+            {' e '}
             <a
               href="https://www.viniccius.com.br/"
               target="_blank"
@@ -39,15 +48,6 @@ export default function FooterBottom() {
               className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
             >
               Vinicius Souza
-            </a>
-            {' e '}
-            <a
-              href="https://github.com/andrearraesDev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:underline text-xs"
-            >
-              André Arraes
             </a>
           </p>
         </div>

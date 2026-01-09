@@ -10,8 +10,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -50,14 +48,19 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
-        {/* Logo */}
+      {/* ALTERAÇÃO AQUI: 
+         Reduzi o 'py-3 sm:py-4' para 'py-1 sm:py-2'. 
+         Isso diminui o espaço sobrando em cima e em baixo, compensando a logo maior.
+      */}
+      <div className="container mx-auto px-3 sm:px-4 py-1 sm:py-2 flex items-center justify-between">
+        
+        {/* Logo Grande */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-lcm.svg"
+              src="/images/Logo_Luciana02.png"
               alt="LCM Cartório"
-              className="w-auto h-7 sm:h-8 md:h-10"
+              className="w-auto h-10 sm:h-12 md:h-16 transition-all duration-300" 
             />
           </Link>
         </div>
@@ -147,7 +150,6 @@ export default function Header() {
         className={`fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-out min-[771px]:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
-        {/* Header do Menu Mobile - AGORA COM A COR #702125 */}
         <div className="bg-[#702125] text-white px-6 py-5 flex items-center justify-between shadow-lg">
           <div className="flex items-center">
             <span style={{ fontFamily: "Montserrat, sans-serif" }} className="font-bold text-xl text-white">
@@ -163,7 +165,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Menu Items */}
         <div className="flex flex-col h-[calc(100%-73px)] overflow-y-auto py-4">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -206,7 +207,6 @@ export default function Header() {
           })}
         </div>
 
-        {/* Footer do Menu */}
         <div className="border-t border-gray-200 px-6 py-4 bg-gray-50/50">
           <p style={{ fontFamily: "Source Sans Pro, sans-serif" }} className="text-xs text-foreground/60 text-center">
             © {new Date().getFullYear()} Cartório LCM

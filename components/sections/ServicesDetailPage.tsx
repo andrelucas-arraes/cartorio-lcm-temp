@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, FileText, Home, Users, Building2, FileStack, AlertCircle } from 'lucide-react';
+import { X, FileText, Home, Users, Building2, FileStack, DollarSign } from 'lucide-react';
 
 interface Service {
   id: string;
@@ -14,7 +14,7 @@ const services: Service[] = [
     id: 'tabelionato-notas',
     title: 'Tabelionato de Notas',
     icon: <FileText className="w-12 h-12 text-[#702125]" />,
-    description: 'Autenticação de documentos e assinaturas',
+    description: 'Atos notariais com autenticidade e segurança jurídica.',
     details: [
       'Escrituras públicas',
       'Procurações públicas',
@@ -34,7 +34,7 @@ const services: Service[] = [
     id: 'registro-imoveis',
     title: 'Registro de Imóveis',
     icon: <Home className="w-12 h-12 text-[#702125]" />,
-    description: 'Registro e transferência de propriedades',
+    description: 'Registro e regularização de imóveis.',
     details: [
       'Abertura de matrícula e registro de títulos',
       'Registros em geral',
@@ -72,7 +72,7 @@ const services: Service[] = [
     id: 'registro-civil-juridicas',
     title: 'Registro Civil das Pessoas Jurídicas',
     icon: <Building2 className="w-12 h-12 text-[#702125]" />,
-    description: 'Registro de empresas e organizações',
+    description: 'Registro de associações, entidades e fundações.',
     details: [
       'Registro de atos constitutivos',
       'Registro de alterações estatutárias',
@@ -85,7 +85,7 @@ const services: Service[] = [
     id: 'registro-titulos-documentos',
     title: 'Registro de Títulos e Documentos',
     icon: <FileStack className="w-12 h-12 text-[#702125]" />,
-    description: 'Registro de contratos e documentos diversos',
+    description: 'Registro e conservação de documentos diversos.',
     details: [
       'Registro de contratos e documentos',
       'Notificação e interpelação extrajudicial',
@@ -97,8 +97,8 @@ const services: Service[] = [
   {
     id: 'tabelionato-protesto',
     title: 'Tabelionato de Protesto de Títulos',
-    icon: <AlertCircle className="w-12 h-12 text-[#702125]" />,
-    description: 'Protesto de títulos e documentos de dívida',
+    icon: <DollarSign className="w-12 h-12 text-[#702125]" />,
+    description: 'Protesto de títulos e documentos de dívida.',
     details: [
       'Protesto de títulos e outros documentos de dívida',
       'Cancelamento de protesto',
@@ -132,7 +132,6 @@ export default function ServicesDetailPage() {
               onClick={() => setSelectedService(service)}
               className="bg-white border border-border rounded-lg p-6 sm:p-8 text-left hover:shadow-lg hover:border-[#702125] transition-all duration-300 cursor-pointer group"
             >
-              {/* REMOVIDO: transform group-hover:scale-110 transition-transform duration-300 */}
               <div className="mb-4">
                 {service.icon}
               </div>
@@ -172,8 +171,7 @@ export default function ServicesDetailPage() {
                 <div className="flex items-start gap-4 flex-1 min-w-0">
                   <div className="bg-white/20 p-3 rounded-xl flex-shrink-0 text-white [&_svg]:w-12 [&_svg]:h-12 [&_svg]:text-white">
                     {/* Clona o ícone e força a cor branca dentro do header vermelho */}
-                    {React.cloneElement(selectedService.icon as React.ReactElement, { className: "w-12 h-12 text-white" })}
-                  </div>
+                    {React.cloneElement(selectedService.icon as React.ReactElement<{ className?: string }>, { className: "w-12 h-12 text-white" })}                  </div>
                   <div className="flex-1 min-w-0">
                     <h3
                       style={{ fontFamily: "Montserrat, sans-serif" }}

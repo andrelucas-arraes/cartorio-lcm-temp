@@ -4,10 +4,10 @@ import FooterNavigation from '@/components/footer/FooterNavigation';
 import FooterForm from '@/components/footer/FooterForm';
 import FooterBottom from '@/components/footer/FooterBottom';
 
-
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    // Alterado bg-primary para bg-[#702125] e text-primary-foreground para text-white
+    <footer className="bg-[#511C23] text-white">
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Grid de 3 colunas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mb-8">

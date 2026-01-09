@@ -99,9 +99,9 @@ const LinksContentSection: React.FC = () => {
     <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
 
-        {/* Texto Introdutório (Mantido conforme seu código anterior) */}
-        <div className="mb-10">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        {/* Texto Introdutório Justificado e com Animação */}
+        <div className="mb-10 animate-in fade-in duration-500 slide-in-from-bottom-4">
+          <p className="text-lg text-justify hyphens-auto text-gray-700 dark:text-gray-300 leading-relaxed">
             Neste módulo disponibilizamos diversos links de sites relacionados à nossa serventia e/ou informações de legislações pertinentes.
           </p>
         </div>
@@ -109,8 +109,8 @@ const LinksContentSection: React.FC = () => {
         {/* Renderização das Categorias */}
         <div className="space-y-12">
           {linkCategories.map((category, index) => (
-            <div key={index}>
-              {/* COR ALTERADA NA BORDA LATERAL (border-[#702125]) */}
+            <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
+              {/* Título com a borda vermelha */}
               <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {category.title}
               </h3>
@@ -122,14 +122,13 @@ const LinksContentSection: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      /* COR ALTERADA NO HOVER DO TEXTO (hover:text-[#702125]) */
-                      className="group flex items-center text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-[#702125] transition duration-150 ease-in-out"
+                      className="group flex items-start text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-[#702125] transition duration-150 ease-in-out"
                     >
-                      {/* COR ALTERADA NO HOVER DO ÍCONE (group-hover:text-[#702125]) */}
-                      <svg className="w-5 h-5 mr-2 text-gray-400 group-hover:text-[#702125] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      {/* Ícone com alinhamento ajustado (mt-1) */}
+                      <svg className="w-5 h-5 mr-2 mt-1 text-gray-400 group-hover:text-[#702125] flex-shrink-0 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                       </svg>
-                      <span>{link.name}</span>
+                      <span className="leading-snug">{link.name}</span>
                     </a>
                   </li>
                 ))}
