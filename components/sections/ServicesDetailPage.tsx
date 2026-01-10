@@ -14,7 +14,7 @@ interface Service {
 const services: Service[] = [
   {
     id: 'tabelionato-protesto',
-    title: 'Tabelionato de Protesto de Títulos',
+    title: 'Protesto de Títulos',
     icon: <DollarSign className="w-12 h-12 text-[#702125]" />,
     description: 'Protesto de títulos e documentos de dívida.',
     details: [

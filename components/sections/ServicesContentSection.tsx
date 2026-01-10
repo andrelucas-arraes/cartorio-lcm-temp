@@ -32,7 +32,7 @@ const servicesData: ServiceSection[] = [
     noteContent: "A documentação varia conforme o tipo de ato. Entre em contato conosco para orientações específicas sobre o seu caso."
   },
   {
-    title: "Tabelionato de Protestos",
+    title: "Protesto de Títulos",
     description: "Responsável pelo protesto de títulos e outros documentos de dívida, conferindo publicidade ao inadimplemento.",
     items: [
       "Protesto de títulos e outros documentos de dívida (apontamento, intimação e lavratura)",
