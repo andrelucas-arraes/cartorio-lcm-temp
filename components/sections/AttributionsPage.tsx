@@ -4,38 +4,38 @@ import { Home, FileText, Users, FileStack, Banknote, Building2 } from 'lucide-re
 
 // Componente da página de Atribuições/Serviços Digitais
 export default function AttributionsPage() {
-  
+
   // 1. Configuração dos dados dos cards (Ícone, Título e Link externo)
   const digitalServices = [
     {
-      icon: <Home className="w-12 h-12 text-white" />,
-      title: "Registro de Imóveis",
-      href: "https://registradores.onr.org.br/", 
+      icon: <Banknote className="w-12 h-12 text-white" />,
+      title: "Protesto de Títulos",
+      href: "https://site.cenprotnacional.org.br/",
     },
     {
       icon: <FileText className="w-12 h-12 text-white" />,
       title: "Tabelionato de Notas",
-      href: "https://www.e-notariado.org.br/", 
+      href: "https://www.e-notariado.org.br/",
+    },
+    {
+      icon: <Home className="w-12 h-12 text-white" />,
+      title: "Registro de Imóveis",
+      href: "https://registradores.onr.org.br/",
     },
     {
       icon: <Users className="w-12 h-12 text-white" />,
       title: "Registro Civil das Pessoas Naturais",
-      href: "https://www.registrocivil.org.br/", 
-    },
-    {
-      icon: <FileStack className="w-12 h-12 text-white" />,
-      title: "Registro de Títulos e Documentos",
-      href: "https://www.rtdbrasil.org.br/", 
+      href: "https://www.registrocivil.org.br/",
     },
     {
       icon: <Building2 className="w-12 h-12 text-white" />,
       title: "Registro Civil das Pessoas Jurídicas",
-      href: "https://www.rtdbrasil.org.br/", 
+      href: "https://www.rtdbrasil.org.br/",
     },
     {
-      icon: <Banknote className="w-12 h-12 text-white" />,
-      title: "Protesto de Títulos",
-      href: "https://site.cenprotnacional.org.br/", 
+      icon: <FileStack className="w-12 h-12 text-white" />,
+      title: "Registro de Títulos e Documentos",
+      href: "https://www.rtdbrasil.org.br/",
     },
   ];
 
@@ -59,7 +59,7 @@ export default function AttributionsPage() {
       ></div>
 
       <div className="container mx-auto px-4 pt-8 md:pt-12">
-        
+
         {/* 4. Título da seção */}
         <h2
           style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -75,7 +75,7 @@ export default function AttributionsPage() {
               key={index}
               icon={service.icon}
               title={service.title}
-              href={service.href} 
+              href={service.href}
             />
           ))}
         </div>

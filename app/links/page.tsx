@@ -4,8 +4,8 @@
 
 'use client'
 import React from 'react';
-import Header from '@/components/Header'; 
-import Footer from '@/components/Footer'; 
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 import HeroSection from '@/components/sections/HeroSection';
 import LinksContentSection from '@/components/sections/LinksContentSection';
@@ -16,23 +16,23 @@ const LinksPage: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
-      
+
       <main className="flex-grow">
         {/* Banner principal */}
-        <HeroSection 
+        <HeroSection
           title="Links Úteis"
           subtitle="Acesso rápido a informações e recursos importantes relacionados à serventia e legislações."
           backgroundImageUrl="/images/hero-aerea.jpg"
           badge="Links"
         />
-        
+
         {/* Lista de links úteis */}
         <LinksContentSection />
-        
+
         {/* Seção de ação */}
-        <ActionSection />   
+        <ActionSection />
       </main>
-      
+
       <Footer />
     </div>
   );

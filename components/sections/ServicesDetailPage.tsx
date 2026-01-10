@@ -13,6 +13,20 @@ interface Service {
 // 2. Base de Dados: Lista estática contendo todos os serviços e seus detalhes
 const services: Service[] = [
   {
+    id: 'tabelionato-protesto',
+    title: 'Tabelionato de Protesto de Títulos',
+    icon: <DollarSign className="w-12 h-12 text-[#702125]" />,
+    description: 'Protesto de títulos e documentos de dívida.',
+    details: [
+      'Protesto de títulos e outros documentos de dívida',
+      'Cancelamento de protesto',
+      'Sustação e desistência do protesto',
+      'Certidões de protesto',
+      'Pesquisa e consulta de protestos',
+      'Procedimentos de cobrança via protesto',
+    ],
+  },
+  {
     id: 'tabelionato-notas',
     title: 'Tabelionato de Notas',
     icon: <FileText className="w-12 h-12 text-[#702125]" />,
@@ -96,20 +110,6 @@ const services: Service[] = [
       'Certidões e traslados de documentos registrados',
     ],
   },
-  {
-    id: 'tabelionato-protesto',
-    title: 'Tabelionato de Protesto de Títulos',
-    icon: <DollarSign className="w-12 h-12 text-[#702125]" />,
-    description: 'Protesto de títulos e documentos de dívida.',
-    details: [
-      'Protesto de títulos e outros documentos de dívida',
-      'Cancelamento de protesto',
-      'Sustação e desistência do protesto',
-      'Certidões de protesto',
-      'Pesquisa e consulta de protestos',
-      'Procedimentos de cobrança via protesto',
-    ],
-  },
 ];
 
 // Componente Principal da Página de Detalhes de Serviços
@@ -120,7 +120,7 @@ export default function ServicesDetailPage() {
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
-        
+
         {/* Título da Seção */}
         <h2
           style={{ fontFamily: "Montserrat, sans-serif" }}
@@ -170,7 +170,7 @@ export default function ServicesDetailPage() {
             className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300"
             onClick={(e) => e.stopPropagation()} // Previne fechamento ao clicar dentro do modal
           >
-            
+
             {/* Header do Modal: Fundo colorido e Ícone */}
             <div className="bg-[#702125] text-white p-6 sm:p-8">
               <div className="flex items-start justify-between gap-4">
@@ -194,7 +194,7 @@ export default function ServicesDetailPage() {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Botão de Fechar (X) */}
                 <button
                   onClick={() => setSelectedService(null)}
