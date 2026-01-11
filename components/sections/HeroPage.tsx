@@ -29,15 +29,9 @@ export default function HeroPage() {
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}
           className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 mb-3 md:mb-4"
         >
-          Aqui você encontra informações importantes
+          Aqui você encontra informações importantes. <br /> Estamos prontos para atender as suas solicitações oferecendo soluções práticas, céleres e inteligentes.
         </p>
 
-        <p
-          style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-          className="text-xs sm:text-sm md:text-sm lg:text-base text-white/80 mb-8 md:mb-10"
-        >
-          Estamos prontos para atender suas solicitações
-        </p>
 
         {/* 4. Botões de Ação (Call to Action) */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -47,7 +41,7 @@ export default function HeroPage() {
             style={{ fontFamily: "Montserrat, sans-serif" }}
             className="px-6 sm:px-8 py-2.5 sm:py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-300 text-sm sm:text-base text-center"
           >
-            Contato
+            Contatos
           </a>
           
           {/* Botão Nossos Serviços (Navegação de página) */}

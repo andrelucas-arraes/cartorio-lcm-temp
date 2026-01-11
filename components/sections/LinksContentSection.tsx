@@ -27,7 +27,7 @@ const linkCategories: LinkCategory[] = [
   {
     title: 'Tabelionato de Protesto',
     links: [
-      { name: 'Pesquisa Protesto (CENPROT)', url: 'https://www.pesquisaprotesto.com.br/' },
+      { name: 'Cartório de Protesto (CENPROT)', url: 'https://www.pesquisaprotesto.com.br/' },
     ],
   },
   {
@@ -36,8 +36,8 @@ const linkCategories: LinkCategory[] = [
       { name: 'RI Digital', url: 'https://ridigital.org.br/' },
       { name: 'Registro de Imóveis do Brasil', url: 'https://www.registrodeimoveis.org.br/' },
       { name: 'Mapa do Registro de Imóveis do Brasil', url: 'https://mapa.onr.org.br/' },
-      { name: 'Diário Registral', url: 'https://www.registrodeimoveis.org.br/diario-registral' },
-      { name: 'Central de Indisponibilidade de Bens', url: 'https://indisponibilidade.onr.org.br/' },
+      { name: 'Diário Registral - Publicação de edital', url: 'https://www.registrodeimoveis.org.br/diario-registral' },
+      { name: 'Central de Indisponibilidade de Bens - CNIB', url: 'https://indisponibilidade.onr.org.br/' },
       { name: 'Sistema de Gestão Fundiária do INCRA – SIGEF', url: 'https://sigef.incra.gov.br/' },
       { name: 'Instituto de Registro Imobiliário do Brasil (IRIB)', url: 'https://www.irib.org.br/' },
     ],
@@ -54,7 +54,7 @@ const linkCategories: LinkCategory[] = [
     title: 'RTD / RCPJ',
     links: [
       { name: 'ON-RTDPJ (Institucional)', url: 'https://onrtdpj.org.br/' },
-      { name: 'Central (Serviços)', url: 'https://www.rtdbrasil.org.br/' },
+      { name: 'Central RTDPJ Brasil (Serviços)', url: 'https://www.rtdbrasil.org.br/' },
       { name: 'Validar certidão/registro (RTD/RCPJ)', url: 'https://www.rtdbrasil.org.br/certidaoregistro/index' },
       { name: 'Operador Nacional do RTDPJ', url: 'https://www.rtdbrasil.org.br/' },
     ],
@@ -62,7 +62,7 @@ const linkCategories: LinkCategory[] = [
   {
     title: 'SERP',
     links: [
-      { name: 'SERP - Sistema Eletrônico dos Registros Públicos', url: 'https://serp.registros.org.br/' },
+      { name: 'Sistema Eletrônico dos Registros Públicos - SERP', url: 'https://serp.registros.org.br/' },
     ],
   },
   {

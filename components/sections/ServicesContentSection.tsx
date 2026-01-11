@@ -99,10 +99,10 @@ const servicesData: ServiceSection[] = [
     description: "Responsável pelo registro de documentos e títulos não atribuídos a outros registros, garantindo sua validade jurídica.",
     items: [
       "Registro de contratos e documentos (locação, comodato, prestação de serviços, confissão de dívida, etc.)",
-      "Notificação e interpelação extrajudicial (com comprovação de entrega)",
+      "Notificação extrajudicial (com comprovação de entrega)",
       "Registro de documentos diversos (declarações, regulamentos, termos, laudos etc.)",
       "Registro de documentos estrangeiros",
-      "Certidões e traslados de documentos registrados"
+      "Certidões de documentos registrados"
     ],
     noteTitle: "Finalidade:",
     noteContent: "O registro confere publicidade, autenticidade e conservação aos documentos registrados."
