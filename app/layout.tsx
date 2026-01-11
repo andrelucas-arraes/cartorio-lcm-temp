@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Layout principal que envolve todas as páginas
+// Layout principal que envolve todas as páginas 
 export default function RootLayout({
   children,
 }: Readonly<{
