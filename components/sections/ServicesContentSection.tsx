@@ -114,12 +114,12 @@ const ServicesContentSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
-        
+
         {/* 3. Renderização Dinâmica dos Serviços (Loop) */}
         <div className="space-y-12">
           {servicesData.map((service, index) => (
             <div key={index} className="animate-in fade-in duration-500 slide-in-from-bottom-4">
-              
+
               {/* Título do Serviço com destaque visual na borda esquerda */}
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 pl-4 border-l-4 border-[#702125]">
                 {service.title}

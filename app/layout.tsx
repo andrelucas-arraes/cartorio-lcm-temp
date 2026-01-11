@@ -22,7 +22,28 @@ const geistMono = Geist_Mono({
 // Metadados SEO
 export const metadata: Metadata = {
   title: "Cartório Luciana Carrilho de Moraes Marinho",
-  description: "Cartório do 1º Ofício de Alto Longá/PI. Serviços cartorários com excelência e segurança jurídica.",
+  description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI . Serviços cartorários com excelência e segurança jurídica.",
+  openGraph: {
+    title: "Cartório Luciana Carrilho de Moraes Marinho",
+    description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI . Serviços cartorários com excelência e segurança jurídica.",
+    siteName: "Cartório LCM",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cartório Luciana Carrilho de Moraes Marinho",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cartório Luciana Carrilho de Moraes Marinho",
+    description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI . Serviços cartorários com excelência e segurança jurídica.",
+    images: ["/images/og.jpg"],
+  },
 };
 
 // Layout principal que envolve todas as páginas
