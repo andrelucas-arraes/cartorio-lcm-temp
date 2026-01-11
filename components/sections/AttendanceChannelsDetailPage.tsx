@@ -142,12 +142,11 @@ export default function AttendanceChannelsDetailPage() {
                   Bairro Centro
                   <br />
                   Alto Longá/PI
-                </p>
-                <p>
-                  <span className="font-semibold">CEP:</span>
                   <br />
-                  64.900-000
+                  <span>CEP: </span>
+                   64.360-000
                 </p>
+
               </div>
             </div>
 
@@ -170,7 +169,7 @@ export default function AttendanceChannelsDetailPage() {
                   08h às 14h
                 </p>
                 <p>
-                  <span className="font-semibold">Sábado e Domingo:</span>
+                  <span className="font-semibold">Sábado, Domingo e Feriados:</span>
                   <br />
                   Fechado
                 </p>

@@ -121,13 +121,23 @@ export default function ServicesDetailPage() {
     <section className="w-full py-12 sm:py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
 
-        {/* Título da Seção */}
-        <h2
-          style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-bold text-2xl sm:text-3xl text-[#702125] text-center mb-8 sm:mb-12 md:mb-16"
-        >
-          Nossos Serviços
-        </h2>
+       {/* Título da Seção */}
+        <div className="text-center mb-10 sm:mb-16">
+          <h2
+            style={{ fontFamily: "Montserrat, sans-serif" }}
+            className="font-bold text-2xl sm:text-3xl text-[#702125] mb-4"
+          >
+            Nossos Serviços
+          </h2>
+          
+          {/* SUBTÍTULO */}
+          <p
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4"
+          >
+            Confira abaixo algumas das atribuições e especialidades do nosso cartório, que garantem segurança jurídica e eficiência para você.
+          </p>
+        </div>
 
         {/* 4. Grid de Cards: Menu Principal */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

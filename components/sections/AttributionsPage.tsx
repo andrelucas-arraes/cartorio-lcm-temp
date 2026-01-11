@@ -2,10 +2,8 @@ import React from 'react';
 import AttributionCard from "@/components/cards/AttributionCard";
 import { Home, FileText, Users, FileStack, Banknote, Building2 } from 'lucide-react';
 
-// Componente da página de Atribuições/Serviços Digitais
 export default function AttributionsPage() {
 
-  // 1. Configuração dos dados dos cards (Ícone, Título e Link externo)
   const digitalServices = [
     {
       icon: <Banknote className="w-12 h-12 text-white" />,
@@ -40,7 +38,6 @@ export default function AttributionsPage() {
   ];
 
   return (
-    // 2. Container da seção com fundo personalizado (Gradiente + Imagem Pattern)
     <section
       className="relative w-full py-12 sm:py-16 md:py-24"
       style={{
@@ -49,7 +46,6 @@ export default function AttributionsPage() {
         backgroundBlendMode: "overlay",
       }}
     >
-      {/* 3. Elemento visual: Recorte diagonal na borda superior */}
       <div
         className="absolute top-0 left-0 right-0 h-16 md:h-24 bg-background"
         style={{
@@ -60,15 +56,22 @@ export default function AttributionsPage() {
 
       <div className="container mx-auto px-4 pt-8 md:pt-12">
 
-        {/* 4. Título da seção */}
-        <h2
-          style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-black text-2xl sm:text-3xl md:text-4xl text-white text-center mb-8 md:mb-16"
-        >
-          SERVIÇOS DIGITAIS
-        </h2>
+        {/* 4. Título e Subtítulo da seção */}
+        <div className="text-center mb-8 md:mb-16">
+            <h2
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="font-black text-2xl sm:text-3xl md:text-4xl text-white mb-3"
+            >
+              SERVIÇOS DIGITAIS
+            </h2>
+            
+            {/* Subtítulo */}
+            <p className="text-lg text-white/80 max-w-2xl mx-auto font-medium">
+              Acesse as centrais eletrônicas do cartório digital e realize ou consulte os seus serviços sem sair de casa.
+            </p>
+        </div>
 
-        {/* 5. Grid de Cards: Mapeia o array 'digitalServices' para renderizar os componentes */}
+        {/* 5. Grid de Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {digitalServices.map((service, index) => (
             <AttributionCard
@@ -81,7 +84,6 @@ export default function AttributionsPage() {
         </div>
       </div>
 
-      {/* 6. Elemento visual: Recorte diagonal na borda inferior */}
       <div
         className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-background"
         style={{

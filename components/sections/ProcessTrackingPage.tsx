@@ -8,21 +8,21 @@ export default function ProcessTrackingPage() {
     <section className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
-          
+
           {/* 1. Cabeçalho da Seção (Título e Descrição) */}
           <h2
             style={{ fontFamily: "Montserrat, sans-serif" }}
             className="font-bold text-2xl sm:text-3xl md:text-4xl text-primary mb-4"
           >
-            Acompanhamento de Processo
+            Consultar Processo Presencial
           </h2>
 
           <p
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className="text-base sm:text-lg text-foreground/70 mb-6 sm:mb-8"
           >
-            Este serviço está em desenvolvimento. Em breve você poderá acompanhar o status de seus processos em tempo real.
-          </p>
+            Serviço de acompanhamento de processo protocolado presencialmente.  <br />
+            Este serviço está em desenvolvimento. Em breve você poderá acompanhar o status de seus processos em tempo real.          </p>
 
           {/* 2. Bloco de Aviso (Feedback Visual de "Em Breve") */}
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 sm:p-6 mb-6 sm:mb-8 rounded">
@@ -63,7 +63,7 @@ export default function ProcessTrackingPage() {
             >
               Entre em contato conosco através dos canais disponíveis:
             </p>
-            
+
             {/* Botões de contato direto (Telefone, WhatsApp, Email) */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <a
