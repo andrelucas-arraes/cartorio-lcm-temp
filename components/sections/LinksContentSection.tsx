@@ -89,6 +89,8 @@ const linkCategories: LinkCategory[] = [
     links: [
       { name: 'Portal Extrajudicial TJPI', url: 'https://www.tjpi.jus.br/portaltjpi/vice-corregedoria/' },
       { name: 'Consulta pública do Selo Digital (TJPI)', url: 'https://www.tjpi.jus.br/portalextra/selodigital/consultaPublica' },
+      { name: 'Tabelas de Custas e Emolumentos', url: 'https://www.tjpi.jus.br/cobjud/modules/cobjud/TabelasDeCobrancas.fpg' },
+
     ],
   },
 ];
