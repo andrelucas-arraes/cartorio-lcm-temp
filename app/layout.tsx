@@ -22,10 +22,10 @@ const geistMono = Geist_Mono({
 // Metadados SEO
 export const metadata: Metadata = {
   title: "Cartório Luciana Carrilho de Moraes Marinho",
-  description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI . Serviços cartorários com excelência e segurança jurídica.",
+  description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI. Serviços cartorários com excelência e segurança jurídica.",
   openGraph: {
     title: "Cartório Luciana Carrilho de Moraes Marinho",
-    description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI . Serviços cartorários com excelência e segurança jurídica.",
+    description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI. Serviços cartorários com excelência e segurança jurídica.",
     siteName: "Cartório LCM",
     locale: "pt_BR",
     type: "website",
