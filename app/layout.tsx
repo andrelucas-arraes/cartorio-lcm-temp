@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 
 // Metadados SEO
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cartorio-lcm-temp.vercel.app/"),
   title: "Cartório Luciana Carrilho de Moraes Marinho",
   description: "Serventia Extrajudicial de Ofício Único de Alto Longá/PI. Serviços cartorários com excelência e segurança jurídica.",
   openGraph: {
