@@ -107,7 +107,7 @@ const LgpdContentSection: React.FC = () => {
             Ainda tem dúvidas sobre seus dados?
           </h3>
           <a
-            href="https://wa.me/5586988718166?text=Olá,%20gostaria%20de%20tirar%20dúvidas%20sobre%20a%20LGPD"
+            href="https://wa.me/558688718166?text=Olá,%20gostaria%20de%20tirar%20dúvidas%20sobre%20a%20LGPD"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-3 px-8 py-4 bg-[#511C23] text-white text-lg font-semibold rounded-full hover:bg-[#5a1a1d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
