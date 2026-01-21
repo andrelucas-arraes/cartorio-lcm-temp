@@ -29,7 +29,7 @@ export default function FooterForm() {
 
     const whatsappMessage = `Olá, meu nome é ${nome} ${sobrenome}.\nEmail: ${email}\n\nMensagem: ${mensagem}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const phoneNumber = '558698718166';
+    const phoneNumber = '558688718166';
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
 

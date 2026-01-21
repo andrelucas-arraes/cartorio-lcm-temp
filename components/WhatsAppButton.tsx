@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 export default function WhatsAppButton() {
   
   // 1. Configuração dos dados de contato e mensagem
-  const phoneNumber = '558698718166';
+  const phoneNumber = '558688718166';
   const message = 'Olá! Gostaria de mais informações sobre os serviços do cartório.';
   
   // Cria a URL formatada (codificando a mensagem para URL segura)
