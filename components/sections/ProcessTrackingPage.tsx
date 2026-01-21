@@ -73,7 +73,7 @@ export default function ProcessTrackingPage() {
                 <Phone className="w-5 h-5" /> Ligar
               </a>
               <a
-                href="https://wa.me/558698718166"
+                href="https://wa.me/558688718166"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"

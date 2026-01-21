@@ -102,7 +102,7 @@ export default function AttendanceChannelsDetailPage() {
                 <span className="font-semibold">Número:</span>
                 <br />
                 <a
-                  href="https://wa.me/558698718166"
+                  href="https://wa.me/558688718166"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
