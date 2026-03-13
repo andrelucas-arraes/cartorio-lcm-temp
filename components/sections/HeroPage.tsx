@@ -24,6 +24,14 @@ export default function HeroPage() {
           Luciana Carrilho de Moraes Marinho
         </h1>
 
+        {/* Nome oficial da serventia - importante para SEO */}
+        <p
+          style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+          className="text-xs sm:text-sm md:text-base text-white/80 mb-2 md:mb-3 font-medium tracking-wide uppercase"
+        >
+          Serventia Extrajudicial do Ofício Único de Alto Longá-PI
+        </p>
+
         {/* Subtítulos / Textos de Apoio */}
         <p
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}

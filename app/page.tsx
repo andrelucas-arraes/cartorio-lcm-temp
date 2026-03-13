@@ -1,8 +1,7 @@
 // =====================================
-// PÁGINA INICIAL (HOME)
+// PÁGINA INICIAL (HOME) - SERVER COMPONENT PARA SEO
 // =====================================
 
-"use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -13,7 +12,7 @@ import ProcessTrackingPage from "@/components/sections/ProcessTrackingPage";
 import ServicesDetailPage from "@/components/sections/ServicesDetailPage";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-// Página principal do site
+// Página principal do site - Server Component para melhor SEO
 export default function Home() {
   return (
     <div className="w-full min-h-screen bg-background">
