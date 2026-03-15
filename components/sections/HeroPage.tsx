@@ -4,7 +4,7 @@ export default function HeroPage() {
   return (
     // 1. Container Principal: Define a altura total (min-h-screen), alinhamento
     <section
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
+      className="relative w-full min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
     >
       {/* 2. Imagem de Fundo otimizada com Next Image */}
       <Image
@@ -26,7 +26,7 @@ export default function HeroPage() {
         {/* Título Principal */}
         <h1
           style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-black text-3xl sm:text-4xl md:text-5xl text-white mb-4 md:mb-6 leading-tight drop-shadow-lg"
+          className="font-black text-[1.35rem] sm:text-4xl md:text-5xl text-white mb-4 md:mb-6 leading-tight drop-shadow-lg"
         >
           Seja bem-vindo ao Cartório<br />
           Luciana Carrilho de Moraes Marinho

@@ -142,7 +142,7 @@ export default function FAQPage() {
         />
         
         {/* Seção de FAQ (Acordeão) */}
-        <section className="py-16 bg-white dark:bg-gray-800">
+        <section className="py-8 sm:py-12 md:py-16 bg-white dark:bg-gray-800">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <h2 style={{ fontFamily: "Montserrat, sans-serif" }} className="text-3xl font-bold text-[#702125] dark:text-red-400 mb-4">

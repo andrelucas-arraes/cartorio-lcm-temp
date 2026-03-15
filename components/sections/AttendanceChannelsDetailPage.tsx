@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 export default function AttendanceChannelsDetailPage() {
   return (
     // Container principal da seção com padding responsivo e cor de fundo
-    <section id='contato' className="w-full py-12 sm:py-16 md:py-24 bg-background ">
+    <section id='contato' className="w-full py-8 sm:py-12 md:py-24 bg-background ">
       <div className="container mx-auto px-4 sm:px-6">
         
         {/* 1. Título da Seção */}

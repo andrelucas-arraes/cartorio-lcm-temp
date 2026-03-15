@@ -56,7 +56,7 @@ const lgpdData: LgpdSectionData[] = [
 // Componente Principal da Seção de Conteúdo LGPD
 const LgpdContentSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
+    <section className="py-8 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
 
         {/* 3. Introdução Geral */}

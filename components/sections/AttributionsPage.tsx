@@ -39,7 +39,7 @@ export default function AttributionsPage() {
 
   return (
     <section
-      className="relative w-full py-12 sm:py-16 md:py-24"
+      className="relative w-full py-8 sm:py-12 md:py-24"
       style={{
         background: "linear-gradient(135deg, #511C23 0%, #3f1417 100%)",
         backgroundImage: "url(/images/pattern-bg.png)",

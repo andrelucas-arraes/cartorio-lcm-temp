@@ -5,8 +5,8 @@ import Image from "next/image";
 interface HeroSectionProps {
   title: string;
   subtitle: string;
-  backgroundImageUrl?: string; 
-  badge?: string;              
+  backgroundImageUrl?: string;
+  badge?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     // 2. Container Principal: Define altura, posicionamento e cor do texto
-    <section className="relative w-full min-h-[60vh] md:h-96 overflow-hidden flex items-center justify-center text-white pt-16 md:pt-0">
+    <section className="relative w-full md:h-96 overflow-hidden flex items-center justify-center text-white pt-20 md:pt-0">
 
       {/* 3. Lógica do Plano de Fundo (Background) */}
       {backgroundImageUrl ? (
@@ -41,15 +41,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute inset-0 bg-black/40 z-[1]" />
 
       {/* 5. Container de Conteúdo */}
-      <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 flex items-center justify-center min-h-[60vh] md:h-full">
+      <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 flex items-center justify-center md:h-full">
         <div className="text-center max-w-2xl">
-
-          {/* Badge (opcional) */}
-          {badge && (
-            <span className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase backdrop-blur-sm border border-white/30">
-              {badge}
-            </span>
-          )}
 
           {/* Título */}
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight">

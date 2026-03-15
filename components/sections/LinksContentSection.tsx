@@ -98,7 +98,7 @@ const linkCategories: LinkCategory[] = [
 // Componente Principal da Seção de Conteúdo de Links Úteis
 const LinksContentSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 bg-white dark:bg-gray-900">
+    <section className="py-8 md:py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
 
         {/* 3. Introdução: Texto explicativo com animação de entrada */}

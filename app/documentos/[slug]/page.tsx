@@ -138,7 +138,6 @@ export default async function DocumentoDetailsPage(props: {
                 <details
                   key={idx}
                   className="group border border-gray-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 [&_summary::-webkit-details-marker]:hidden print:border-none print:shadow-none print:rounded-none print:bg-transparent print:overflow-visible"
-                  open={idx === 0}
                 >
                   <summary className="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer bg-white hover:bg-gray-50 transition-colors focus:outline-none print:hidden">
                     <div className="flex items-center gap-4">

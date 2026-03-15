@@ -22,13 +22,13 @@ export default function DocumentSearchClient() {
 
   return (
     <section className="container mx-auto px-4 max-w-5xl -mt-8 relative z-10">
-      
+
       {/* Search Input Box */}
       <div className="bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 mb-10 border border-gray-100">
         <Search className="w-6 h-6 text-[lab(19_25.78_8.75)] ml-2" />
         <input
           type="text"
-          placeholder="Qual serviço você está buscando? (ex: usucapião, compra e venda...)"
+          placeholder="Qual serviço você está buscando?"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex-1 bg-transparent border-none text-gray-800 text-lg focus:outline-none focus:ring-0 placeholder:text-gray-400"
@@ -46,7 +46,7 @@ export default function DocumentSearchClient() {
 
           return (
             <div key={category} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <h2 
+              <h2
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
                 className="text-2xl font-bold text-[lab(19_25.78_8.75)] mb-6 flex items-center gap-2 border-b-2 border-[lab(19_25.78_8.75)]/10 pb-2"
               >
@@ -54,8 +54,8 @@ export default function DocumentSearchClient() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {docsInCategory.map((doc) => (
-                  <Link 
-                    key={doc.slug} 
+                  <Link
+                    key={doc.slug}
                     href={`/documentos/${doc.slug}`}
                     className="group"
                   >
@@ -64,14 +64,14 @@ export default function DocumentSearchClient() {
                         <div className="bg-[lab(19_25.78_8.75)]/10 p-3 rounded-xl text-[lab(19_25.78_8.75)] group-hover:bg-[lab(19_25.78_8.75)] group-hover:text-white transition-colors duration-300">
                           <FileText size={24} />
                         </div>
-                        <h3 
+                        <h3
                           style={{ fontFamily: 'Montserrat, sans-serif' }}
                           className="text-xl font-bold text-gray-800 group-hover:text-[lab(19_25.78_8.75)] transition-colors leading-tight"
                         >
                           {doc.titulo}
                         </h3>
                       </div>
-                      <p 
+                      <p
                         style={{ fontFamily: 'Source Sans Pro, sans-serif' }}
                         className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1"
                       >

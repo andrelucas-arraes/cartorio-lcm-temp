@@ -18,7 +18,7 @@ export default function DocumentosPage() {
 
       <main className="flex-grow pb-16">
         {/* Header Banner */}
-        <section className="bg-[lab(19_25.78_8.75)] text-white pt-[130px] md:pt-[144px] pb-12 px-4 shadow-md">
+        <section className="bg-[lab(19_25.78_8.75)] text-white pt-[90px] md:pt-[144px] pb-12 md:pb-16 px-4 shadow-md">
           <div className="container mx-auto max-w-5xl text-center">
             <h1 
               style={{ fontFamily: 'Montserrat, sans-serif' }}

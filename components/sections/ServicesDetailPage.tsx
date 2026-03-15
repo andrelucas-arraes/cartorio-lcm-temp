@@ -137,7 +137,7 @@ export default function ServicesDetailPage() {
   }, [selectedService]);
 
   return (
-    <section className="w-full py-12 sm:py-16 md:py-24 bg-background">
+    <section className="w-full py-8 sm:py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
 
        {/* Título da Seção */}

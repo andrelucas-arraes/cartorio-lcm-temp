@@ -261,6 +261,13 @@ export default function RootLayout({
             gtag('config', 'G-9Q0CJQVS79');
           `}
         </Script>
+
+        {/* Ahrefs Web Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="mBC04jIaBvSrQZ72lBETFA"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${sourceSans.variable} antialiased`}

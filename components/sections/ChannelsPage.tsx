@@ -1,13 +1,13 @@
 export default function ChannelsPage() {
   return (
     // Container principal da seção com espaçamento vertical (py-24)
-    <section className="w-full py-24 bg-background">
+    <section className="w-full py-8 sm:py-12 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         
         {/* 1. Título da Seção */}
         <h2 
           style={{ fontFamily: "Montserrat, sans-serif" }} 
-          className="font-bold text-3xl text-primary text-center mb-16"
+          className="font-bold text-3xl text-primary text-center mb-8 sm:mb-12 md:mb-16"
         >
           Canais de atendimento - Corregedoria Geral (CCJPE)
         </h2>

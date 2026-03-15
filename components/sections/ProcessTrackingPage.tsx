@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 export default function ProcessTrackingPage() {
   return (
     // Container Principal: Seção com fundo gradiente suave
-    <section className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-background to-background/80">
+    <section className="w-full py-8 sm:py-12 md:py-24 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
 
