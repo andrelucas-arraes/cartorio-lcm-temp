@@ -10,7 +10,6 @@ import AttributionsPage from "@/components/sections/AttributionsPage";
 import HeroPage from "@/components/sections/HeroPage";
 import ProcessTrackingPage from "@/components/sections/ProcessTrackingPage";
 import ServicesDetailPage from "@/components/sections/ServicesDetailPage";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Página principal do site - Server Component para melhor SEO
 export default function Home() {
@@ -36,7 +35,6 @@ export default function Home() {
       </main>
       
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }

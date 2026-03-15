@@ -129,4 +129,92 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Mapeia fontes inline para as CSS variables self-hosted do next/font */
+  [style*="Montserrat"] {
+    font-family: var(--font-montserrat), sans-serif !important;
+  }
+
+  [style*="Source Sans"] {
+    font-family: var(--font-source-sans), sans-serif !important;
+  }
+}
+
+@media print {
+  /* Força cores absolutas sem depender do tema claro/escuro */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Oculta Cabeçalho, Rodapé, Sidebar, Botões e elementos não essenciais */
+  header, footer, aside, button, .no-print, nav, [role="navigation"] {
+    display: none !important;
+  }
+
+  /* Expande o Container Principal e retira espaçamentos desnecessários */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    background: white !important;
+  }
+
+  /* Remove bordas, sombras e curvas dos fundos para economizar tinta e focar no conteúdo */
+  * {
+    box-shadow: none !important;
+  }
+  
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  section {
+    width: 100% !important;
+  }
+
+  /* Garante que os containers não contenham scroll e não fiquem restritos na página */
+  .overflow-hidden {
+    overflow: visible !important;
+  }
+
+  /* Formata títulos para não quebrarem e separarem o conteúdo */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* As sanfonas precisam renderizar totalmente se estiverem abertas via JS (o script já faz isso) */
+  details {
+    display: block !important;
+    border: none !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  summary {
+    display: none !important; /* Esconde o botão de abrir da sanfona na hora de imprimir */
+  }
+
+  /* Formatação de lista e bullet points para não quebrarem o layout na impressão */
+  li {
+    page-break-inside: avoid;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Insere um Título Padrão de Identificação Visual do Cartório na Página de Impressão */
+  body::before {
+    content: "CARTÓRIO LCM - CHECKLIST DE DOCUMENTAÇÃO";
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #000;
+    color: #000;
+  }
 }

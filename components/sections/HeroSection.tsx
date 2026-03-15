@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // 1. Interface que define as propriedades aceitas pelo componente
 interface HeroSectionProps {
@@ -19,14 +20,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <section className="relative w-full min-h-[60vh] md:h-96 overflow-hidden flex items-center justify-center text-white pt-16 md:pt-0">
 
       {/* 3. Lógica do Plano de Fundo (Background) */}
-      {/* Se 'backgroundImageUrl' existir, exibe a imagem. Caso contrário, exibe um gradiente padrão. */}
       {backgroundImageUrl ? (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${backgroundImageUrl}')`,
-          }}
-          aria-hidden="true"
+        <Image
+          src={backgroundImageUrl}
+          alt={title}
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={80}
         />
       ) : (
         <div
@@ -36,13 +38,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       )}
 
       {/* 4. Overlay Escuro */}
-      {/* Camada preta semitransparente para garantir que o texto seja legível sobre a imagem/gradiente */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40 z-[1]" />
 
       {/* 5. Container de Conteúdo */}
-      {/* Centraliza o texto vertical e horizontalmente sobre o fundo (z-10) */}
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 flex items-center justify-center min-h-[60vh] md:h-full">
         <div className="text-center max-w-2xl">
+
+          {/* Badge (opcional) */}
+          {badge && (
+            <span className="inline-block bg-white/20 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase backdrop-blur-sm border border-white/30">
+              {badge}
+            </span>
+          )}
 
           {/* Título */}
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight">

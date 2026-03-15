@@ -37,14 +37,16 @@ class ErrorBoundary extends Component<Props, State> {
               className="text-destructive mb-6"
             />
 
-            <h2 className="text-xl mb-4">An unexpected error occurred.</h2>
+            <h2 className="text-xl mb-4">Ocorreu um erro inesperado.</h2>
 
-            {/* Exibição do Stack Trace para depuração */}
-            <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
-              <pre className="text-sm text-muted-foreground whitespace-break-spaces">
-                {this.state.error?.stack}
-              </pre>
-            </div>
+            {/* Exibição do Stack Trace apenas em desenvolvimento */}
+            {process.env.NODE_ENV !== 'production' && this.state.error?.stack && (
+              <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
+                <pre className="text-sm text-muted-foreground whitespace-break-spaces">
+                  {this.state.error.stack}
+                </pre>
+              </div>
+            )}
 
             {/* Botão para recarregar a página */}
             <button
@@ -56,7 +58,7 @@ class ErrorBoundary extends Component<Props, State> {
               )}
             >
               <RotateCcw size={16} />
-              Reload Page
+              Recarregar Página
             </button>
           </div>
         </div>

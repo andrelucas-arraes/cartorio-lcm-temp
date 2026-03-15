@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, FileText, Home, Users, Building2, FileStack, DollarSign } from 'lucide-react';
 
 // 1. Interface: Define a estrutura de dados para cada serviço
@@ -118,6 +118,23 @@ const services: Service[] = [
 export default function ServicesDetailPage() {
   // 3. Estado: Controla qual serviço está selecionado para exibir no Modal (null = modal fechado)
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  // Trava scroll do body e adiciona listener do Escape quando o modal está aberto
+  useEffect(() => {
+    if (selectedService) {
+      document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setSelectedService(null);
+      };
+      document.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = 'unset';
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [selectedService]);
 
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 bg-background">

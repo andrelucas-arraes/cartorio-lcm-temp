@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from '@/components/ui/image';
-import { Home, Briefcase, Link2, Shield, Mail, X, HelpCircle } from 'lucide-react';
+import { Home, Briefcase, Link2, Shield, Mail, X, HelpCircle, FileText } from 'lucide-react';
 
 export default function Header() {
 
@@ -40,6 +40,7 @@ export default function Header() {
     { href: '/nossos-servicos', label: 'Nossos Serviços', icon: Briefcase, isActive: pathname === '/nossos-servicos' },
     { href: '/duvidas-frequentes', label: 'Dúvidas', icon: HelpCircle, isActive: pathname === '/duvidas-frequentes' },
     { href: '/links', label: 'Links Úteis', icon: Link2, isActive: pathname === '/links' },
+    { href: '/documentos', label: 'Documentação', icon: FileText, isActive: pathname.startsWith('/documentos') },
     { href: '/lgpd', label: 'LGPD', icon: Shield, isActive: pathname === '/lgpd' },
     { href: pathname === '/' ? '#contato' : '/#contato', label: 'Contato', icon: Mail, isActive: false },
   ];
@@ -72,7 +73,7 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
           </Link>
-          <a
+          <Link
             href="/nossos-servicos"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/nossos-servicos' ? 'text-[#702125]' : 'text-foreground'}`}
@@ -81,8 +82,8 @@ export default function Header() {
             {pathname === '/nossos-servicos' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/duvidas-frequentes"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/duvidas-frequentes' ? 'text-[#702125]' : 'text-foreground'}`}
@@ -91,8 +92,8 @@ export default function Header() {
             {pathname === '/duvidas-frequentes' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/links"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/links' ? 'text-[#702125]' : 'text-foreground'}`}
@@ -101,8 +102,18 @@ export default function Header() {
             {pathname === '/links' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
-          </a>
-          <a
+          </Link>
+          <Link
+            href="/documentos"
+            style={{ fontFamily: "Source Sans Pro, sans-serif" }}
+            className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname.startsWith('/documentos') ? 'text-[#702125]' : 'text-foreground'}`}
+          >
+            Documentação
+            {pathname.startsWith('/documentos') && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
+            )}
+          </Link>
+          <Link
             href="/lgpd"
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className={`text-xs min-[771px]:text-xs min-[1018px]:text-sm font-medium hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap ${pathname === '/lgpd' ? 'text-[#702125]' : 'text-foreground'}`}
@@ -111,14 +122,14 @@ export default function Header() {
             {pathname === '/lgpd' && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#702125]"></span>
             )}
-          </a>
-          <a
+          </Link>
+          <Link
             href={pathname === '/' ? '#contato' : '/#contato'}
             style={{ fontFamily: "Source Sans Pro, sans-serif" }}
             className="text-xs lg:text-sm font-medium text-foreground hover:text-[#702125] transition-colors relative pb-1 whitespace-nowrap"
           >
             Contato
-          </a>
+          </Link>
         </nav>
 
         {/* Botão Hambúrguer (Mobile) */}
@@ -173,7 +184,7 @@ export default function Header() {
           {menuItems.map((item) => {
             const Icon = item.icon;
             return (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={closeMobileMenu}
@@ -206,7 +217,7 @@ export default function Header() {
                 {item.isActive && (
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-white rounded-r-full"></div>
                 )}
-              </a>
+              </Link>
             );
           })}
         </div>

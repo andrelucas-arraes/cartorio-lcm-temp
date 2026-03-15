@@ -81,7 +81,7 @@ export default function ProcessTrackingPage() {
                 <FaWhatsapp className="w-5 h-5" /> WhatsApp
               </a>
               <a
-                href="mailto:cartorio1officiopi@hotmail.com"
+                href="mailto:cartorio1oficiopi@hotmail.com"
                 className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2 text-base sm:text-lg"
               >
                 <Mail className="w-5 h-5" /> Email

@@ -5,11 +5,20 @@
 // de prioridade e frequência de rastreamento avançadas para SEO.
 
 import { MetadataRoute } from 'next'
+import { servicosDocs } from '@/lib/data/documentos'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // DOMÍNIO PRINCIPAL DO SITE
-  const baseUrl = 'https://www.cartorioaltolonga.com.br/'
+  // DOMÍNIO PRINCIPAL DO SITE (sem barra final)
+  const baseUrl = 'https://www.cartorioaltolonga.com.br'
   const lastModified = new Date()
+
+  // Páginas dinâmicas de documentos
+  const documentPages: MetadataRoute.Sitemap = servicosDocs.map((doc) => ({
+    url: `${baseUrl}/documentos/${doc.slug}`,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
 
   return [
     // ---------------------------------------------------------
@@ -25,8 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ---------------------------------------------------------
     // PÁGINA DE SERVIÇOS
-    // Prioridade (0.9), muito importante para captar clientes locais 
-    // que buscam serviços específicos (Protesto, Registro de Imóveis, etc).
     // ---------------------------------------------------------
     {
       url: `${baseUrl}/nossos-servicos`,
@@ -37,19 +44,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ---------------------------------------------------------
     // PÁGINA DE DÚVIDAS FREQUENTES (FAQ)
-    // Prioridade (0.8), essencial para rankear respostas com "FAQPage Schema"
-    // e capturar buscas "cauda longa" do Google.
     // ---------------------------------------------------------
     {
-      url: `${baseUrl}duvidas-frequentes`,
+      url: `${baseUrl}/duvidas-frequentes`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
 
     // ---------------------------------------------------------
-    // PÁGINA DE LINKS (Agregador / Árvore de Links)
-    // Prioridade (0.7), útil para tráfego social (Instagram) e WhatsApp.
+    // CENTRAL DE DOCUMENTAÇÃO
+    // ---------------------------------------------------------
+    {
+      url: `${baseUrl}/documentos`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+
+    // Páginas individuais de documentação
+    ...documentPages,
+
+    // ---------------------------------------------------------
+    // PÁGINA DE LINKS
     // ---------------------------------------------------------
     {
       url: `${baseUrl}/links`,
@@ -59,9 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // ---------------------------------------------------------
-    // PÁGINA DE POLÍTICA DE PRIVACIDADE E TERMOS (LGPD)
-    // Prioridade (0.5), essencial para compliance jurídico, mas 
-    // não é o foco para geração de tráfego de usuários.
+    // PÁGINA LGPD
     // ---------------------------------------------------------
     {
       url: `${baseUrl}/lgpd`,

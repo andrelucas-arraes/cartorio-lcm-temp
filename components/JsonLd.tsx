@@ -172,9 +172,9 @@ export default function JsonLd() {
       "url": "https://www.cartorioaltolonga.com.br"
     },
     "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.cartorioaltolonga.com.br/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+      "@type": "ContactAction",
+      "target": "https://wa.me/558688718166",
+      "name": "Contato via WhatsApp"
     }
   };
 
@@ -197,12 +197,24 @@ export default function JsonLd() {
       {
         "@type": "ListItem",
         "position": 3,
+        "name": "Dúvidas Frequentes",
+        "item": "https://www.cartorioaltolonga.com.br/duvidas-frequentes"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Documentação Necessária",
+        "item": "https://www.cartorioaltolonga.com.br/documentos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
         "name": "Links Úteis",
         "item": "https://www.cartorioaltolonga.com.br/links"
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 6,
         "name": "LGPD",
         "item": "https://www.cartorioaltolonga.com.br/lgpd"
       }

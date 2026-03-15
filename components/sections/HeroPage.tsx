@@ -1,24 +1,32 @@
+import Image from 'next/image';
+
 export default function HeroPage() {
   return (
-    // 1. Container Principal: Define a altura total (min-h-screen), alinhamento e imagem de fundo
+    // 1. Container Principal: Define a altura total (min-h-screen), alinhamento
     <section
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
-      style={{
-        backgroundImage: "url(/images/hero-aerea.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      {/* 2. Overlay: Camada semitransparente sobre a imagem para melhorar a leitura do texto */}
-      <div className="absolute inset-0 bg-primary/40"></div>
+      {/* 2. Imagem de Fundo otimizada com Next Image */}
+      <Image
+        src="/images/hero-aerea.jpg"
+        alt="Vista aérea de Alto Longá, Piauí"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+        quality={80}
+      />
 
-      {/* 3. Container de Conteúdo Centralizado (Texto e Botões) */}
-      <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 text-center max-w-2xl">
+      {/* 3. Overlay: Camada semitransparente sobre a imagem para melhorar a leitura do texto */}
+      <div className="absolute inset-0 bg-primary/40 z-[1]"></div>
+
+      {/* 4. Container de Conteúdo Centralizado (Texto e Botões) */}
+      <div className="relative z-10 container mx-auto px-4 py-8 md:py-0 text-center max-w-5xl">
         
         {/* Título Principal */}
         <h1
           style={{ fontFamily: "Montserrat, sans-serif" }}
-          className="font-black text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl text-white mb-4 md:mb-6 leading-tight"
+          className="font-black text-3xl sm:text-4xl md:text-5xl text-white mb-4 md:mb-6 leading-tight drop-shadow-lg"
         >
           Seja bem-vindo ao Cartório<br />
           Luciana Carrilho de Moraes Marinho
@@ -27,7 +35,7 @@ export default function HeroPage() {
         {/* Nome oficial da serventia - importante para SEO */}
         <p
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-          className="text-xs sm:text-sm md:text-base text-white/80 mb-2 md:mb-3 font-medium tracking-wide uppercase"
+          className="text-sm sm:text-base md:text-lg text-white/90 mb-6 md:mb-8 font-semibold tracking-wider uppercase drop-shadow-md"
         >
           Serventia Extrajudicial do Ofício Único de Alto Longá-PI
         </p>
@@ -35,13 +43,13 @@ export default function HeroPage() {
         {/* Subtítulos / Textos de Apoio */}
         <p
           style={{ fontFamily: "Source Sans Pro, sans-serif" }}
-          className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 mb-3 md:mb-4"
+          className="text-base sm:text-lg md:text-xl text-white/95 mb-8 md:mb-10 leading-relaxed font-medium drop-shadow-md max-w-5xl mx-auto"
         >
-          Aqui você encontra informações importantes. <br /> Estamos prontos para atender as suas solicitações oferecendo soluções práticas, céleres e inteligentes.
+          Aqui você encontra informações importantes. <br className="hidden md:block" /> Estamos prontos para atender as suas solicitações oferecendo soluções práticas, céleres e inteligentes.
         </p>
 
 
-        {/* 4. Botões de Ação (Call to Action) */}
+        {/* 5. Botões de Ação (Call to Action) */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           {/* Botão Contato (Scroll suave via âncora) */}
           <a
@@ -63,9 +71,9 @@ export default function HeroPage() {
         </div>
       </div>
 
-      {/* 5. Elemento Decorativo: Corte diagonal na parte inferior (visível apenas em desktop) */}
+      {/* 6. Elemento Decorativo: Corte diagonal na parte inferior (visível apenas em desktop) */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-background hidden md:block"
+        className="absolute bottom-0 left-0 right-0 h-16 md:h-24 bg-background hidden md:block z-[2]"
         style={{
           clipPath: "polygon(0 8%, 100% 0, 100% 100%, 0 100%)",
         }}

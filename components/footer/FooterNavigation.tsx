@@ -9,7 +9,7 @@ export default function FooterNavigation() {
     { label: "Nossos Serviços", href: "/nossos-servicos" },
     { label: "Links Úteis", href: "/links" },
     { label: "LGPD", href: "/lgpd" },
-    { label: "Contato", href: "#contato" },
+    { label: "Contato", href: "/#contato" },
   ];
 
   return (

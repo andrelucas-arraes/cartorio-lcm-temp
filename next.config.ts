@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
       exclude: ["error", "warn"],
     } : false,
   },
+  images: {
+    qualities: [75, 80],
+  },
 };
 
 export default nextConfig;

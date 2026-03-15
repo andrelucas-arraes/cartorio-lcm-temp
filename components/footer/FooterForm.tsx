@@ -23,11 +23,17 @@ export default function FooterForm() {
     }));
   };
 
+  // Sanitiza entrada removendo caracteres potencialmente perigosos
+  const sanitize = (str: string) => str.replace(/[<>{}\\]/g, '').trim();
+
   // Envia dados do formulário via WhatsApp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { nome, sobrenome, email, mensagem } = formData;
+    const nome = sanitize(formData.nome);
+    const sobrenome = sanitize(formData.sobrenome);
+    const email = sanitize(formData.email);
+    const mensagem = sanitize(formData.mensagem);
 
     const whatsappMessage = `Olá, meu nome é ${nome} ${sobrenome}.\nEmail: ${email}\n\nMensagem: ${mensagem}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
