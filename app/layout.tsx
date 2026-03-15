@@ -186,6 +186,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <meta name="ahrefs-site-verification" content="1f34046b22d8df3426a9bc3da503842e749190d54fb122fe495cb72a74691f59" />
         {/* Dados estruturados JSON-LD para SEO */}
         <JsonLd />
 
