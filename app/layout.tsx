@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 // METADADOS SEO COMPLETOS
 // =====================================
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cartorio-lcm-temp.vercel.app"),
+  metadataBase: new URL("https://www.cartorioaltolonga.com.br"),
 
   // Título padrão e template para sub-páginas
   title: {
@@ -116,9 +116,9 @@ export const metadata: Metadata = {
 
   // Canonical URL
   alternates: {
-    canonical: "https://cartorio-lcm-temp.vercel.app",
+    canonical: "https://www.cartorioaltolonga.com.br",
     languages: {
-      "pt-BR": "https://cartorio-lcm-temp.vercel.app",
+      "pt-BR": "https://www.cartorioaltolonga.com.br",
     },
   },
 
@@ -131,7 +131,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://cartorio-lcm-temp.vercel.app",
+    url: "https://www.cartorioaltolonga.com.br",
     siteName: "Cartório Luciana Carrilho de Moraes Marinho - Serventia Extrajudicial do Ofício Único de Alto Longá/PI",
     title: "Cartório Alto Longá PI | Serventia Extrajudicial do Ofício Único - Luciana Carrilho de Moraes Marinho",
     description:

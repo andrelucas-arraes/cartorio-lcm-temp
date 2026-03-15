@@ -52,9 +52,9 @@ export default function JsonLd() {
       "Primeiro Ofício Alto Longá"
     ],
     "description": "Cartório de Ofício Único da Comarca de Alto Longá, Piauí. Oferecemos serviços de Registro Civil, Tabelionato de Notas, Registro de Imóveis, Registro de Títulos e Documentos, Registro Civil de Pessoas Jurídicas e Protesto de Títulos com excelência e segurança jurídica.",
-    "url": "https://cartorio-lcm-temp.vercel.app",
-    "logo": "https://cartorio-lcm-temp.vercel.app/images/Logo_Luciana02.png",
-    "image": "https://cartorio-lcm-temp.vercel.app/images/og.jpg",
+    "url": "https://www.cartorioaltolonga.com.br",
+    "logo": "https://www.cartorioaltolonga.com.br/images/Logo_Luciana02.png",
+    "image": "https://www.cartorioaltolonga.com.br/images/og.jpg",
     "telephone": "+55-86-98871-8166",
     "email": "cartorio1oficiopi@hotmail.com",
     "address": {
@@ -162,18 +162,18 @@ export default function JsonLd() {
       "Cartório Alto Longá Piauí",
       "Cartório LCM Alto Longá"
     ],
-    "url": "https://cartorio-lcm-temp.vercel.app",
+    "url": "https://www.cartorioaltolonga.com.br",
     "description": "Site oficial da Serventia Extrajudicial do Ofício Único de Alto Longá, Piauí - Cartório Luciana Carrilho de Moraes Marinho. Serviços de Registro Civil, Tabelionato de Notas, Registro de Imóveis, Protesto de Títulos e mais.",
     "inLanguage": "pt-BR",
     "publisher": {
       "@type": "Organization",
       "name": "Cartório Luciana Carrilho de Moraes Marinho",
       "alternateName": "Serventia Extrajudicial do Ofício Único de Alto Longá-PI",
-      "url": "https://cartorio-lcm-temp.vercel.app"
+      "url": "https://www.cartorioaltolonga.com.br"
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://cartorio-lcm-temp.vercel.app/?q={search_term_string}",
+      "target": "https://www.cartorioaltolonga.com.br/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -186,25 +186,25 @@ export default function JsonLd() {
         "@type": "ListItem",
         "position": 1,
         "name": "Início",
-        "item": "https://cartorio-lcm-temp.vercel.app"
+        "item": "https://www.cartorioaltolonga.com.br"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Nossos Serviços",
-        "item": "https://cartorio-lcm-temp.vercel.app/nossos-servicos"
+        "item": "https://www.cartorioaltolonga.com.br/nossos-servicos"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Links Úteis",
-        "item": "https://cartorio-lcm-temp.vercel.app/links"
+        "item": "https://www.cartorioaltolonga.com.br/links"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "LGPD",
-        "item": "https://cartorio-lcm-temp.vercel.app/lgpd"
+        "item": "https://www.cartorioaltolonga.com.br/lgpd"
       }
     ]
   };

@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   description:
     "Acesse links úteis do Cartório de Alto Longá, Piauí: centrais eletrônicas de serviços cartorários, legislações, órgãos reguladores e recursos importantes para cidadãos.",
   alternates: {
-    canonical: "https://cartorio-lcm-temp.vercel.app/links",
+    canonical: "https://www.cartorioaltolonga.com.br/links",
   },
   openGraph: {
     title: "Links Úteis | Cartório Alto Longá PI",
     description:
       "Links úteis do Cartório de Alto Longá, Piauí: centrais eletrônicas, legislações e recursos importantes.",
-    url: "https://cartorio-lcm-temp.vercel.app/links",
+    url: "https://www.cartorioaltolonga.com.br/links",
     images: [
       {
         url: "/images/og.jpg",

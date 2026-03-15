@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   description:
     "Conheça os serviços do Cartório de Alto Longá, Piauí: Registro Civil de Pessoas Naturais e Jurídicas, Tabelionato de Notas, Registro de Imóveis, Protesto de Títulos, Registro de Títulos e Documentos. Atendimento com excelência e segurança jurídica.",
   alternates: {
-    canonical: "https://cartorio-lcm-temp.vercel.app/nossos-servicos",
+    canonical: "https://www.cartorioaltolonga.com.br/nossos-servicos",
   },
   openGraph: {
     title: "Nossos Serviços | Cartório Alto Longá PI",
     description:
       "Serviços cartorários completos em Alto Longá, Piauí: Registro Civil, Tabelionato de Notas, Registro de Imóveis, Protesto de Títulos e mais.",
-    url: "https://cartorio-lcm-temp.vercel.app/nossos-servicos",
+    url: "https://www.cartorioaltolonga.com.br/nossos-servicos",
     images: [
       {
         url: "/images/og.jpg",

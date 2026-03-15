@@ -63,6 +63,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://cartorio-lcm-temp.vercel.app/sitemap.xml',
+    sitemap: 'https://www.cartorioaltolonga.com.br/sitemap.xml',
   }
 }

@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   description:
     "Saiba como o Cartório de Alto Longá, Piauí, trata seus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD). Conheça seus direitos e nossa política de privacidade.",
   alternates: {
-    canonical: "https://cartorio-lcm-temp.vercel.app/lgpd",
+    canonical: "https://www.cartorioaltolonga.com.br/lgpd",
   },
   openGraph: {
     title: "LGPD - Proteção de Dados | Cartório Alto Longá PI",
     description:
       "Política de proteção de dados pessoais do Cartório de Alto Longá, Piauí, conforme a LGPD.",
-    url: "https://cartorio-lcm-temp.vercel.app/lgpd",
+    url: "https://www.cartorioaltolonga.com.br/lgpd",
     images: [
       {
         url: "/images/og.jpg",
